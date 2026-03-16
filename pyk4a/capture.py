@@ -1,3 +1,4 @@
+import time
 from typing import Optional
 
 import numpy as np
@@ -49,6 +50,10 @@ class PyK4ACapture:
                 self._color_timestamp_usec,
                 self._color_system_timestamp_nsec,
             ) = k4a_module.capture_get_color_image(self._capture_handle, self.thread_safe)
+            if self._color is not None and self._color_system_timestamp_nsec == 0:
+                # Some SDK/platform combinations report 0 system timestamp.
+                # Fallback to Unix wall-clock timestamp for downstream logging.
+                self._color_system_timestamp_nsec = time.time_ns()
         return self._color
 
     @property
@@ -60,7 +65,7 @@ class PyK4ACapture:
 
     @property
     def color_system_timestamp_nsec(self) -> int:
-        """System timestamp for color image in nanoseconds. Corresponds to Python's time.perf_counter_ns()."""
+        """System timestamp for color image in nanoseconds (falls back to Unix time if SDK returns 0)."""
         if self._color is None:
             self.color
         return self._color_system_timestamp_nsec
@@ -100,6 +105,10 @@ class PyK4ACapture:
                 self._depth_timestamp_usec,
                 self._depth_system_timestamp_nsec,
             ) = k4a_module.capture_get_depth_image(self._capture_handle, self.thread_safe)
+            if self._depth is not None and self._depth_system_timestamp_nsec == 0:
+                # Some SDK/platform combinations report 0 system timestamp.
+                # Fallback to Unix wall-clock timestamp for downstream logging.
+                self._depth_system_timestamp_nsec = time.time_ns()
         return self._depth
 
     @property
@@ -111,7 +120,7 @@ class PyK4ACapture:
 
     @property
     def depth_system_timestamp_nsec(self) -> int:
-        """System timestamp for depth image in nanoseconds. Corresponds to Python's time.perf_counter_ns()."""
+        """System timestamp for depth image in nanoseconds (falls back to Unix time if SDK returns 0)."""
         if self._depth is None:
             self.depth
         return self._depth_system_timestamp_nsec
@@ -123,6 +132,10 @@ class PyK4ACapture:
             self._ir, self._ir_timestamp_usec, self._ir_system_timestamp_nsec = k4a_module.capture_get_ir_image(
                 self._capture_handle, self.thread_safe
             )
+            if self._ir is not None and self._ir_system_timestamp_nsec == 0:
+                # Some SDK/platform combinations report 0 system timestamp.
+                # Fallback to Unix wall-clock timestamp for downstream logging.
+                self._ir_system_timestamp_nsec = time.time_ns()
         return self._ir
 
     @property
@@ -133,7 +146,7 @@ class PyK4ACapture:
 
     @property
     def ir_system_timestamp_nsec(self) -> int:
-        """System timestamp for IR image in nanoseconds. Corresponds to Python's time.perf_counter_ns()."""
+        """System timestamp for IR image in nanoseconds (falls back to Unix time if SDK returns 0)."""
         if self._ir is None:
             self.ir
         return self._ir_system_timestamp_nsec
