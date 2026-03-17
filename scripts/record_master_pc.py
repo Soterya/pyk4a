@@ -1,6 +1,7 @@
-import csv
+import json
 import time
 from pathlib import Path
+from typing import Dict, TextIO
 
 from pyk4a import (
     ColorResolution,
@@ -14,8 +15,8 @@ from pyk4a import (
     connected_device_count,
 )
 
-# Master PC local setup: 3 devices total (1 MASTER + 2 SUBORDINATES)
-# Adjust device_id values if your local device ordering is different.
+# Master PC setup: 3 devices total (1 MASTER + 2 SUBORDINATES)
+# Adjust device_id values if local ordering is different.
 LOCAL_DEVICES = [
     {"device_id": 0, "name": "master", "mode": WiredSyncMode.MASTER, "sub_delay_usec": 0},
     {"device_id": 1, "name": "sub_local_1", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 200},
@@ -27,9 +28,9 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 BASE_CONFIG = dict(
     color_format=ImageFormat.COLOR_MJPG,
-    color_resolution=ColorResolution.RES_720P,
-    depth_mode=DepthMode.NFOV_UNBINNED,
-    camera_fps=FPS.FPS_30,
+    color_resolution=ColorResolution.RES_3072P,
+    depth_mode=DepthMode.WFOV_2X2BINNED,
+    camera_fps=FPS.FPS_15,
     synchronized_images_only=True,
 )
 
@@ -42,6 +43,27 @@ def build_config(mode: WiredSyncMode, sub_delay_usec: int) -> Config:
         wired_sync_mode=WiredSyncMode.SUBORDINATE,
         subordinate_delay_off_master_usec=sub_delay_usec,
     )
+
+
+def open_sidecar_json(path: Path, metadata: Dict) -> TextIO:
+    fh = open(path, "w", encoding="utf-8")
+    fh.write("{\"metadata\":")
+    json.dump(metadata, fh, separators=(",", ":"))
+    fh.write(",\"frames\":[")
+    return fh
+
+
+def append_json_frame(fh: TextIO, frame_data: Dict, is_first: bool) -> bool:
+    if not is_first:
+        fh.write(",")
+    json.dump(frame_data, fh, separators=(",", ":"))
+    return False
+
+
+def close_sidecar_json(fh: TextIO) -> None:
+    fh.write("]}\n")
+    fh.flush()
+    fh.close()
 
 
 def main() -> None:
@@ -70,39 +92,31 @@ def main() -> None:
     records = []
     for c in cameras:
         serial = c["device"].serial
-        path = OUT_DIR / f"{c['spec']['name']}_dev{c['spec']['device_id']}_{serial}.mkv"
-        sidecar_path = path.with_suffix(".timestamps.csv")
-        rec = PyK4ARecord(path=path, config=c["config"], device=c["device"])
+        mkv_path = OUT_DIR / f"{c['spec']['name']}_dev{c['spec']['device_id']}_{serial}.mkv"
+        sidecar_path = mkv_path.with_suffix(".timestamps.json")
+        rec = PyK4ARecord(path=mkv_path, config=c["config"], device=c["device"])
         rec.create()
-        sidecar_fh = open(sidecar_path, "w", newline="")
-        sidecar_writer = csv.writer(sidecar_fh)
-        sidecar_writer.writerow(
-            [
-                "frame_idx",
-                "device_id",
-                "serial",
-                "name",
-                "mode",
-                "sub_delay_usec",
-                "host_unix_before_get_ns",
-                "host_unix_after_get_ns",
-                "host_unix_mid_get_ns",
-                "host_monotonic_after_get_ns",
-                "depth_timestamp_usec",
-                "depth_system_timestamp_nsec",
-                "color_timestamp_usec",
-                "color_system_timestamp_nsec",
-            ]
-        )
+
+        metadata = {
+            "name": c["spec"]["name"],
+            "device_id": c["spec"]["device_id"],
+            "serial": serial,
+            "wired_sync_mode": c["spec"]["mode"].name,
+            "subordinate_delay_off_master_usec": c["spec"]["sub_delay_usec"],
+            "record_path": str(mkv_path),
+            "started_unix_ns": time.time_ns(),
+        }
+        sidecar_fh = open_sidecar_json(sidecar_path, metadata)
+
         records.append(
             {
                 "camera": c,
-                "record": rec,
-                "path": path,
                 "serial": serial,
+                "record": rec,
+                "mkv_path": mkv_path,
                 "sidecar_path": sidecar_path,
                 "sidecar_fh": sidecar_fh,
-                "sidecar_writer": sidecar_writer,
+                "sidecar_first_frame": True,
                 "frame_idx": 0,
             }
         )
@@ -116,7 +130,6 @@ def main() -> None:
                 cap = r["camera"]["device"].get_capture(timeout=1000)
                 host_unix_after_get_ns = time.time_ns()
                 host_unix_mid_get_ns = (host_unix_before_get_ns + host_unix_after_get_ns) // 2
-                host_monotonic_after_get_ns = time.perf_counter_ns()
                 captures.append(
                     (
                         r,
@@ -124,39 +137,28 @@ def main() -> None:
                         host_unix_before_get_ns,
                         host_unix_after_get_ns,
                         host_unix_mid_get_ns,
-                        host_monotonic_after_get_ns,
                     )
                 )
 
-            ts = [cap.depth_timestamp_usec for _, cap, _, _, _, _ in captures]
+            ts = [cap.depth_timestamp_usec for _, cap, _, _, _ in captures]
             skew_usec = max(ts) - min(ts)
             if skew_usec > 1000:
                 print(f"local timestamp skew={skew_usec} usec")
 
-            for r, cap, host_before, host_after, host_mid, host_mono_after in captures:
+            for r, cap, host_before, host_after, host_mid in captures:
                 depth_ts_usec = cap.depth_timestamp_usec
-                depth_sys_ts_ns = cap.depth_system_timestamp_nsec
-                color_ts_usec = cap.color_timestamp_usec
-                color_sys_ts_ns = cap.color_system_timestamp_nsec
 
-                r["sidecar_writer"].writerow(
-                    [
-                        r["frame_idx"],
-                        r["camera"]["spec"]["device_id"],
-                        r["serial"],
-                        r["camera"]["spec"]["name"],
-                        r["camera"]["spec"]["mode"].name,
-                        r["camera"]["spec"]["sub_delay_usec"],
-                        host_before,
-                        host_after,
-                        host_mid,
-                        host_mono_after,
-                        depth_ts_usec,
-                        depth_sys_ts_ns,
-                        color_ts_usec,
-                        color_sys_ts_ns,
-                    ]
+                frame_data = {
+                    "frame_idx": r["frame_idx"],
+                    "host_unix_before_get_ns": host_before,
+                    "host_unix_after_get_ns": host_after,
+                    "host_unix_mid_get_ns": host_mid,
+                    "depth_timestamp_usec": depth_ts_usec,
+                }
+                r["sidecar_first_frame"] = append_json_frame(
+                    r["sidecar_fh"], frame_data, r["sidecar_first_frame"]
                 )
+
                 r["record"].write_capture(cap)
                 r["frame_idx"] += 1
     except KeyboardInterrupt:
@@ -165,10 +167,11 @@ def main() -> None:
         for r in records:
             r["record"].flush()
             r["record"].close()
-            r["sidecar_fh"].flush()
-            r["sidecar_fh"].close()
+            close_sidecar_json(r["sidecar_fh"])
             r["camera"]["device"].stop()
-            print(f"saved {r['path']} frames={r['record'].captures_count} sidecar={r['sidecar_path']}")
+            print(
+                f"saved {r['mkv_path']} frames={r['record'].captures_count} sidecar={r['sidecar_path']}"
+            )
 
 
 if __name__ == "__main__":

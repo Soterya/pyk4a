@@ -132,7 +132,7 @@ def main() -> None:
             captures = []
             for r in records:
                 host_unix_before_get_ns = time.time_ns()
-                cap = r["camera"]["device"].get_capture(timeout=1000)
+                cap = r["camera"]["device"].get_capture(timeout=5000)
                 host_unix_after_get_ns = time.time_ns()
                 host_unix_mid_get_ns = (host_unix_before_get_ns + host_unix_after_get_ns) // 2
                 captures.append(
