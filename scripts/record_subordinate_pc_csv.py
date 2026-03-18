@@ -23,10 +23,8 @@ from pyk4a import (
 # Subordinate PC setup: 2 devices, both SUBORDINATE.
 # IMPORTANT: delays must be globally unique across all subordinates in the full rig.
 LOCAL_DEVICES = [
-    # {"device_id": 1, "name": "master", "mode": WiredSyncMode.MASTER, "sub_delay_usec": 0},
-    # Use when both master and subordinate are connected to the same PC.
-    {"device_id": 1, "name": "sub_remote_1", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 200},
-    {"device_id": 0, "name": "sub_remote_2", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 400},
+    {"device_id": 1, "name": "master",      "mode": WiredSyncMode.MASTER,       "sub_delay_usec": 0},
+    {"device_id": 0, "name": "subordinate", "mode": WiredSyncMode.SUBORDINATE,  "sub_delay_usec": 200},
 ]
 
 OUT_DIR = Path("multi_mkv/subordinate_pc")
