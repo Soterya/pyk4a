@@ -79,7 +79,7 @@ def main() -> None:
 
         ts_fh = open(ts_csv_path, "w", newline="", encoding="utf-8")
         ts_writer = csv.writer(ts_fh)
-        ts_writer.writerow(["frame_idx", "post_write_timestamp_ns", "depth_timestamp_usec"])
+        ts_writer.writerow(["frame_idx", "save_timestamp_ns", "depth_timestamp_usec"])
 
         outputs.append(
             {
@@ -106,10 +106,10 @@ def main() -> None:
                     )
                     continue
 
+                # Host timestamp taken right before persisting this capture.
+                save_timestamp_ns = time.time_ns()
+                out["ts_writer"].writerow([out["frame_idx"], save_timestamp_ns, cap.depth_timestamp_usec])
                 out["record"].write_capture(cap)
-                # Host timestamp taken immediately after persisting this capture.
-                post_write_timestamp_ns = time.time_ns()
-                out["ts_writer"].writerow([out["frame_idx"], post_write_timestamp_ns, cap.depth_timestamp_usec])
                 out["frame_idx"] += 1
     except KeyboardInterrupt:
         print("Stopping subordinate PC recording")
