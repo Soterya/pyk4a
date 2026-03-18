@@ -20,8 +20,8 @@ from pyk4a import (
 # Here we continue after master PC's local subordinates (200, 400) with 600 and 800.
 # Adjust device_id values if your local device ordering is different.
 LOCAL_DEVICES = [
-    {"device_id": 0, "name": "sub_remote_1", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 600},
-    {"device_id": 1, "name": "sub_remote_2", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 800},
+    {"device_id": 1, "name": "sub_remote_1", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 200},
+    {"device_id": 0, "name": "sub_remote_2", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 400},
 ]
 
 OUT_DIR = Path("multi_mkv/subordinate_pc")
@@ -125,7 +125,7 @@ def main() -> None:
             captures = []
             for r in records:
                 host_unix_before_get_ns = time.time_ns()
-                cap = r["camera"]["device"].get_capture(timeout=1000)
+                cap = r["camera"]["device"].get_capture(timeout=10000)
                 host_unix_after_get_ns = time.time_ns()
                 host_unix_mid_get_ns = (host_unix_before_get_ns + host_unix_after_get_ns) // 2
                 captures.append(
