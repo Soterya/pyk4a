@@ -4,7 +4,8 @@ __pycache__/
 
 # C extensions
 *.so
-
+scripts/multi_mkv1/
+scripts/multi_mkv2/
 # Distribution / packaging
 .eggs/
 .Python
