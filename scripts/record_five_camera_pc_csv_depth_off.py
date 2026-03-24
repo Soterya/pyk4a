@@ -21,14 +21,16 @@ from pyk4a import (
 )
 
 # Local setup: 5 devices total (1 MASTER + 4 SUBORDINATES), depth disabled.
+# Current rig mapping from `k4arecorder.exe --list`:
+# device 1 = master, device 4 = subordinate_1, device 3 = subordinate_2,
+# device 2 = subordinate_3, device 0 = subordinate_4.
 # IMPORTANT: subordinate delays must be globally unique across the full rig.
-# Adjust device_id values to match the order on this machine.
 LOCAL_DEVICES = [
     {"device_id": 0, "name": "master", "mode": WiredSyncMode.MASTER, "sub_delay_usec": 0},
-    {"device_id": 1, "name": "subordinate_1", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 200},
-    {"device_id": 2, "name": "subordinate_2", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 400},
-    {"device_id": 3, "name": "subordinate_3", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 600},
-    {"device_id": 4, "name": "subordinate_4", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 800},
+    {"device_id": 2, "name": "subordinate_1", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 200},
+    {"device_id": 3, "name": "subordinate_2", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 400},
+    {"device_id": 4, "name": "subordinate_3", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 600},
+    {"device_id": 1, "name": "subordinate_4", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 800},
 ]
 
 OUT_DIR = Path("multi_mkv/five_camera_pc_depth_off")

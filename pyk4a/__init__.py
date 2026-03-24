@@ -24,6 +24,7 @@ from .transformation import (
 
 
 def connected_device_count() -> int:
+    print("Some erorr ")
     return k4a_module.device_get_installed_count()
 
 

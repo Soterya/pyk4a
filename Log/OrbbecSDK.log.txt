@@ -1,0 +1,713 @@
+[03/23 18:32:45.866647][info][41496][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 18:32:45.866758][info][41496][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/23 18:32:45.866771][info][41496][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:32:45.866785][info][41496][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:32:47.910186][info][41496][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 18:32:47.910236][info][41496][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/23 18:32:47.910246][info][41496][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:32:48.604888][info][41496][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:32:48.605119][info][41496][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x18D632B4E90
+[03/23 18:32:48.652049][warning][41496][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:32:48.652306][info][41496][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x18D632B4E90
+[03/23 18:32:48.652379][info][41496][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:33:23.173688][info][41676][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 18:33:23.173775][info][41676][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/23 18:33:23.173782][info][41676][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:33:23.173791][info][41676][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:33:25.200411][info][41676][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 18:33:25.200442][info][41676][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/23 18:33:25.200448][info][41676][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:33:25.886584][info][41676][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:33:25.886807][info][41676][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x1A9071BFE80
+[03/23 18:33:25.933239][warning][41676][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:33:25.933401][info][41676][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:33:25.933416][info][41676][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:33:25.933423][info][41676][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:33:25.933431][info][41676][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:33:25.933438][info][41676][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:33:25.965253][info][41676][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:33:25.965287][info][41676][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:33:26.974412][warning][41676][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000
+[03/23 18:33:29.983452][warning][41676][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 3009ms**]
+[03/23 18:33:36.008086][warning][41676][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**6 logs in 6024ms**]
+[03/23 18:33:48.074990][warning][41676][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**12 logs in 12066ms**]
+[03/23 18:34:00.122786][info][41676][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 18:34:00.122821][info][41676][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 18:34:00.122844][info][41676][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 18:34:02.524424][info][41676][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 18:34:02.524474][info][41676][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 18:34:02.524484][info][41676][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 18:34:02.524504][info][41676][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 18:34:02.524556][info][41676][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x1A9071BFE80
+[03/23 18:34:02.524665][info][41676][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:34:02.543235][warning][6624][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**12 logs in 14468ms, last: 18:34:00.121315**]
+[03/23 18:34:28.425097][warning][3480][UsbEnumeratorLibusb.cpp:399] Failed to open USB device: error=Entity not found. Try again
+[03/23 18:34:28.478465][warning][3480][UsbEnumeratorLibusb.cpp:403] Failed to open USB device (Entity not found), skipping, info.serial and infName may be empty
+[03/23 18:34:28.479748][warning][3480][WinUsbPal.cpp:246] Found a usb port without interface url! drop it!(device url=\\?\USB#VID_2BC5&PID_066B#CL8RC5301ZH#{A5DCBF10-6530-11D2-901F-00C04FB951ED} interface index=4)
+[03/23 18:34:28.480103][info][3480][DeviceManager.cpp:25] Current found device(s): (1)
+[03/23 18:34:28.480118][info][3480][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/23 18:34:28.480128][info][3480][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:34:29.619520][warning][44212][WinUsbPal.cpp:246] Found a usb port without interface url! drop it!(device url=\\?\USB#VID_2BC5&PID_066B#CL8RC5301ZH#{A5DCBF10-6530-11D2-901F-00C04FB951ED} interface index=4)
+[03/23 18:34:29.619763][info][44456][DeviceManager.cpp:266] Device changed! removed: 0, added: 1
+[03/23 18:34:29.619782][info][44456][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 18:34:29.619789][info][44456][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/23 18:34:29.619793][info][44456][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:34:30.512477][info][3480][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 18:34:30.512504][info][3480][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/23 18:34:30.512510][info][3480][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:34:34.048346][info][3480][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:34:34.048572][info][3480][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x202B2DFF1B0
+[03/23 18:34:34.094886][warning][3480][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:34:34.095043][info][3480][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:34:34.095058][info][3480][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:34:34.095065][info][3480][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:34:34.095073][info][3480][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:34:34.095080][info][3480][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:34:34.127571][info][3480][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:34:34.127594][info][3480][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:34:35.135854][warning][3480][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000
+[03/23 18:34:38.151515][warning][3480][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 3015ms**]
+[03/23 18:34:44.168232][warning][3480][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**6 logs in 6016ms**]
+[03/23 18:34:45.173755][info][3480][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 18:34:45.173777][info][3480][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 18:34:45.173798][info][3480][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 18:34:47.565142][info][3480][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 18:34:47.565172][info][3480][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 18:34:47.565178][info][3480][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 18:34:47.565191][info][3480][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 18:34:47.565230][info][3480][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x202B2DFF1B0
+[03/23 18:34:47.565312][info][3480][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:34:47.702297][warning][29708][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**1 logs in 3534ms, last: 18:34:45.172174**]
+[03/23 18:35:40.411235][info][15196][DeviceManager.cpp:25] Current found device(s): (1)
+[03/23 18:35:40.411320][info][15196][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:35:40.411332][info][15196][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:35:42.453578][info][15196][DeviceManager.cpp:25] Current device(s) list: (1)
+[03/23 18:35:42.453608][info][15196][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:35:43.113971][info][15196][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:35:43.114260][info][15196][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x1AC7F8CBE50
+[03/23 18:35:43.460870][warning][15196][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:35:43.461027][info][15196][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:35:43.461042][info][15196][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:35:43.461048][info][15196][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:35:43.461056][info][15196][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:35:43.461063][info][15196][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:35:43.469905][info][15196][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:35:43.469927][info][15196][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:35:44.473084][warning][15196][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000
+[03/23 18:35:47.489462][warning][15196][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 3016ms**]
+[03/23 18:35:53.507703][warning][15196][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**6 logs in 6018ms**]
+[03/23 18:35:55.525704][info][15196][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 18:35:55.525733][info][15196][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 18:35:55.525781][info][15196][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 18:35:57.901527][info][15196][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 18:35:57.901556][info][15196][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 18:35:57.901561][info][15196][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 18:35:57.901575][info][15196][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 18:35:57.901616][info][15196][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x1AC7F8CBE50
+[03/23 18:35:57.901701][info][15196][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:35:57.918975][warning][45040][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**2 logs in 4411ms, last: 18:35:55.524399**]
+[03/23 18:36:11.943011][info][39836][DeviceManager.cpp:25] Current found device(s): (0)
+[03/23 18:36:11.943096][info][39836][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:36:13.973158][info][39836][DeviceManager.cpp:25] Current device(s) list: (0)
+[03/23 18:36:17.756578][info][42420][DeviceManager.cpp:25] Current found device(s): (1)
+[03/23 18:36:17.756672][info][42420][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:36:17.756684][info][42420][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:36:19.777483][info][42420][DeviceManager.cpp:25] Current device(s) list: (1)
+[03/23 18:36:19.777515][info][42420][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:36:20.039293][info][42420][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8S16100G1 FW: 1.1.3
+[03/23 18:36:20.039567][info][42420][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x1FB5CBA6E40
+[03/23 18:36:20.051726][warning][42420][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:36:20.051872][info][42420][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[03/23 18:36:20.051886][info][42420][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[03/23 18:36:20.051893][info][42420][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:36:20.051900][info][42420][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[03/23 18:36:20.051906][info][42420][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:36:20.060019][info][42420][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[03/23 18:36:20.060035][info][42420][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[03/23 18:36:20.965557][info][21936][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[03/23 18:36:25.992446][info][21936][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.236723fps
+[03/23 18:36:25.992572][info][34672][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.236723fps
+[03/23 18:36:30.636818][info][42420][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[03/23 18:36:30.636845][info][42420][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[03/23 18:36:30.636869][info][42420][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[03/23 18:36:31.193667][info][42420][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[03/23 18:36:31.193896][info][42420][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[03/23 18:36:31.193915][info][42420][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[03/23 18:36:31.193929][info][42420][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[03/23 18:36:31.193965][info][42420][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x1FB5CBA6E40
+[03/23 18:36:31.194132][info][42420][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/23 18:37:40.214781][info][44940][DeviceManager.cpp:25] Current found device(s): (1)
+[03/23 18:37:40.214865][info][44940][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:37:40.214877][info][44940][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:37:42.240902][info][44940][DeviceManager.cpp:25] Current device(s) list: (1)
+[03/23 18:37:42.240931][info][44940][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:37:42.900489][info][44940][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8S16100G1 FW: 1.1.3
+[03/23 18:37:42.900703][info][44940][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x2D1FA66F5E0
+[03/23 18:37:42.912834][warning][44940][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:37:42.912990][info][44940][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[03/23 18:37:42.913004][info][44940][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[03/23 18:37:42.913011][info][44940][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:37:42.913018][info][44940][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[03/23 18:37:42.913024][info][44940][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:37:42.922328][info][44940][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[03/23 18:37:42.922344][info][44940][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[03/23 18:37:43.396023][info][19424][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[03/23 18:37:48.421471][info][24060][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.248756fps
+[03/23 18:37:48.421575][info][40340][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.248756fps
+[03/23 18:37:48.824477][info][44940][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[03/23 18:37:48.824525][info][44940][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[03/23 18:37:48.824548][info][44940][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[03/23 18:37:49.462236][info][44940][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[03/23 18:37:49.462457][info][44940][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[03/23 18:37:49.462474][info][44940][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[03/23 18:37:49.462489][info][44940][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[03/23 18:37:49.462522][info][44940][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x2D1FA66F5E0
+[03/23 18:37:49.462610][info][44940][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/23 18:37:56.418558][info][31592][DeviceManager.cpp:25] Current found device(s): (1)
+[03/23 18:37:56.418668][info][31592][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:37:56.418683][info][31592][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:37:58.463930][info][31592][DeviceManager.cpp:25] Current device(s) list: (1)
+[03/23 18:37:58.463960][info][31592][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:38:02.406054][info][40080][DeviceManager.cpp:25] Current found device(s): (1)
+[03/23 18:38:02.406141][info][40080][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:38:02.406153][info][40080][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:38:04.455319][info][40080][DeviceManager.cpp:25] Current device(s) list: (1)
+[03/23 18:38:04.455348][info][40080][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:38:10.110628][info][32160][DeviceManager.cpp:25] Current found device(s): (1)
+[03/23 18:38:10.110720][info][32160][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:38:10.110732][info][32160][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:38:12.153655][info][32160][DeviceManager.cpp:25] Current device(s) list: (1)
+[03/23 18:38:12.153682][info][32160][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:38:47.702600][info][42976][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 18:38:47.702697][info][42976][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:38:47.702704][info][42976][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 18:38:47.702713][info][42976][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:38:49.723450][info][42976][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 18:38:49.723479][info][42976][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:38:49.723484][info][42976][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 18:38:50.034814][info][42976][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:38:50.035036][info][42976][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x17BECC0EC60
+[03/23 18:38:50.379177][warning][42976][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:38:50.379339][info][42976][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:38:50.379354][info][42976][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:38:50.379360][info][42976][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:38:50.379368][info][42976][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:38:50.379375][info][42976][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:38:50.387293][info][42976][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:38:50.387316][info][42976][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:38:51.400325][warning][42976][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000
+[03/23 18:38:54.413221][warning][42976][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 3012ms**]
+[03/23 18:39:00.434837][warning][42976][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**6 logs in 6021ms**]
+[03/23 18:39:03.459220][info][42976][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 18:39:03.459246][info][42976][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 18:39:03.459269][info][42976][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 18:39:05.849963][info][42976][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 18:39:05.849994][info][42976][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 18:39:05.850000][info][42976][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 18:39:05.850013][info][42976][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 18:39:05.850056][info][42976][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x17BECC0EC60
+[03/23 18:39:05.850145][info][42976][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:39:06.817338][warning][7276][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 6382ms, last: 18:39:03.457659**]
+[03/23 18:39:10.206302][info][39640][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 18:39:10.206390][info][39640][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:39:10.206397][info][39640][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 18:39:10.206407][info][39640][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:39:12.232999][info][39640][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 18:39:12.233030][info][39640][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:39:12.233035][info][39640][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 18:39:12.530797][info][39640][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:39:12.531035][info][39640][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x1C6FF35FEF0
+[03/23 18:39:12.874413][warning][39640][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:39:12.874563][info][39640][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:39:12.874581][info][39640][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:39:12.874587][info][39640][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:39:12.874594][info][39640][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:39:12.874601][info][39640][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:39:12.880880][info][39640][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:39:12.880911][info][39640][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:39:13.889928][warning][39640][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000
+[03/23 18:39:16.897771][warning][39640][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 3007ms**]
+[03/23 18:39:22.941914][warning][39640][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**6 logs in 6044ms**]
+[03/23 18:39:27.965382][info][39640][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 18:39:27.965407][info][39640][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 18:39:27.965430][info][39640][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 18:39:30.340058][info][39640][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 18:39:30.340094][info][39640][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 18:39:30.340100][info][39640][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 18:39:30.340114][info][39640][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 18:39:30.340159][info][39640][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x1C6FF35FEF0
+[03/23 18:39:30.340245][info][39640][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:39:30.345634][warning][45008][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**5 logs in 7403ms, last: 18:39:27.964015**]
+[03/23 18:39:55.080179][info][31148][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 18:39:55.080314][info][31148][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:39:55.080324][info][31148][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:39:55.080374][info][31148][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:39:57.115018][info][31148][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 18:39:57.115048][info][31148][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:39:57.115053][info][31148][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:39:57.631747][info][31148][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:39:57.631969][info][31148][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x26E35CB9DA0
+[03/23 18:39:57.678337][warning][31148][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:39:57.678492][info][31148][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:39:57.678508][info][31148][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:39:57.678515][info][31148][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:39:57.678522][info][31148][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:39:57.678529][info][31148][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:39:57.710431][info][31148][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:39:57.710454][info][31148][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:39:58.711552][warning][31148][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000
+[03/23 18:40:01.723499][warning][31148][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 3011ms**]
+[03/23 18:40:07.745811][warning][31148][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**6 logs in 6022ms**]
+[03/23 18:40:19.801522][warning][31148][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**12 logs in 12055ms**]
+[03/23 18:40:29.869474][info][31148][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 18:40:29.869499][info][31148][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 18:40:29.869521][info][31148][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 18:40:32.283572][info][31148][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 18:40:32.283603][info][31148][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 18:40:32.283608][info][31148][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 18:40:32.283622][info][31148][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 18:40:32.283663][info][31148][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x26E35CB9DA0
+[03/23 18:40:32.283746][info][31148][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:40:32.457912][warning][37736][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**10 logs in 12656ms, last: 18:40:29.868108**]
+[03/23 18:40:35.755882][info][33384][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 18:40:35.755971][info][33384][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:40:35.755978][info][33384][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:40:35.755987][info][33384][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:40:37.787259][info][33384][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 18:40:37.787288][info][33384][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:40:37.787330][info][33384][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:40:38.459663][info][33384][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:40:38.459942][info][33384][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x2227F9B2A60
+[03/23 18:40:38.506256][warning][33384][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:40:38.506410][info][33384][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:40:38.506425][info][33384][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:40:38.506432][info][33384][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:40:38.506440][info][33384][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:40:38.506447][info][33384][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:40:38.538191][info][33384][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:40:38.538214][info][33384][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:40:39.543263][warning][33384][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000
+[03/23 18:40:42.553062][warning][33384][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 3009ms**]
+[03/23 18:40:43.558230][info][33384][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 18:40:43.558255][info][33384][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 18:40:43.558277][info][33384][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 18:40:45.943409][info][33384][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 18:40:45.943440][info][33384][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 18:40:45.943445][info][33384][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 18:40:45.943459][info][33384][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 18:40:45.943501][info][33384][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x2227F9B2A60
+[03/23 18:40:45.943584][info][33384][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:40:46.879069][warning][35296][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**1 logs in 4326ms, last: 18:40:43.556547**]
+[03/23 18:41:47.991297][info][35188][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 18:41:47.991370][info][35188][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:41:47.991377][info][35188][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:41:47.991387][info][35188][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:41:50.034528][info][35188][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 18:41:50.034558][info][35188][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:41:50.034564][info][35188][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:41:50.721840][info][35188][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:41:50.722054][info][35188][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x1735BFA1A50
+[03/23 18:41:50.768427][warning][35188][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:41:50.768779][info][35188][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:41:50.768847][info][35188][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:41:50.768862][info][35188][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:41:50.768870][info][35188][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:41:50.768877][info][35188][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:41:50.800289][info][35188][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:41:50.800326][info][35188][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:41:51.807981][warning][35188][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000
+[03/23 18:41:54.815728][warning][35188][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 3007ms**]
+[03/23 18:42:00.855651][warning][35188][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**6 logs in 6039ms**]
+[03/23 18:42:12.927846][warning][35188][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**12 logs in 12072ms**]
+[03/23 18:42:12.929496][info][35188][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 18:42:12.929513][info][35188][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 18:42:12.929536][info][35188][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 18:42:15.333702][info][35188][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 18:42:15.333746][info][35188][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 18:42:15.333757][info][35188][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 18:42:15.333777][info][35188][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 18:42:15.333830][info][35188][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x1735BFA1A50
+[03/23 18:42:15.333944][info][35188][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:43:42.989651][info][4856][DeviceManager.cpp:25] Current found device(s): (0)
+[03/23 18:43:42.989740][info][4856][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:43:44.958915][info][13504][DeviceManager.cpp:266] Device changed! removed: 0, added: 1
+[03/23 18:43:44.958959][info][13504][DeviceManager.cpp:25] Current device(s) list: (1)
+[03/23 18:43:44.958965][info][13504][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:43:45.017645][info][4856][DeviceManager.cpp:25] Current device(s) list: (1)
+[03/23 18:43:45.017692][info][4856][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:43:52.361258][info][19592][DeviceManager.cpp:25] Current found device(s): (1)
+[03/23 18:43:52.361367][info][19592][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:43:52.361381][info][19592][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:43:54.399701][info][19592][DeviceManager.cpp:25] Current device(s) list: (1)
+[03/23 18:43:54.399730][info][19592][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:43:55.066572][info][19592][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8S16100G1 FW: 1.1.3
+[03/23 18:43:55.066887][info][19592][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x1FEE7EEFC00
+[03/23 18:43:55.112648][warning][19592][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:43:55.112944][info][19592][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[03/23 18:43:55.113060][info][19592][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[03/23 18:43:55.113086][info][19592][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:43:55.113100][info][19592][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[03/23 18:43:55.113112][info][19592][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:43:55.145276][info][19592][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[03/23 18:43:55.145306][info][19592][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[03/23 18:43:55.708926][info][44096][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[03/23 18:44:00.736692][info][44096][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.230709fps
+[03/23 18:44:00.736837][info][44684][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.236723fps
+[03/23 18:44:05.763595][info][44096][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.037796fps
+[03/23 18:44:05.763734][info][44684][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.037796fps
+[03/23 18:44:10.792484][info][44356][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.025850fps
+[03/23 18:44:10.792598][info][44684][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.025850fps
+[03/23 18:44:13.623050][warning][44684][Pipeline.cpp:295] [CL8S16100G1] Output frameset queue is full, drop oldest frameset!
+[03/23 18:44:15.819599][info][44356][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.037796fps
+[03/23 18:44:15.819731][info][44684][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.037796fps
+[03/23 18:44:16.023402][info][19592][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[03/23 18:44:16.023452][info][19592][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[03/23 18:44:16.023475][info][19592][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[03/23 18:44:16.598361][info][19592][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[03/23 18:44:16.598570][info][19592][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[03/23 18:44:16.598586][info][19592][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[03/23 18:44:16.598600][info][19592][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[03/23 18:44:16.598634][info][19592][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x1FEE7EEFC00
+[03/23 18:44:16.598724][info][19592][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/23 18:44:16.615580][warning][38152][Pipeline.cpp:295] [CL8S16100G1] Output frameset queue is full, drop oldest frameset! [**3 logs in 2992ms, last: 18:44:13.721943**]
+[03/23 18:44:32.745955][info][492][DeviceManager.cpp:25] Current found device(s): (0)
+[03/23 18:44:32.746041][info][492][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:44:34.774599][info][492][DeviceManager.cpp:25] Current device(s) list: (0)
+[03/23 18:44:38.908717][info][38632][DeviceManager.cpp:25] Current found device(s): (1)
+[03/23 18:44:38.908805][info][38632][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:44:38.908817][info][38632][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:44:40.950680][info][38632][DeviceManager.cpp:25] Current device(s) list: (1)
+[03/23 18:44:40.950709][info][38632][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:44:41.466559][info][38632][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:44:41.466778][info][38632][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x2156B56CA80
+[03/23 18:44:41.512748][warning][38632][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:44:41.513135][info][38632][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:44:41.513183][info][38632][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:44:41.513205][info][38632][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:44:41.513220][info][38632][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:44:41.513233][info][38632][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:44:41.545200][info][38632][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:44:41.545223][info][38632][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:44:42.546184][warning][38632][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000
+[03/23 18:44:45.555403][warning][38632][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 3009ms**]
+[03/23 18:44:51.596559][warning][38632][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**6 logs in 6041ms**]
+[03/23 18:44:56.628631][info][38632][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 18:44:56.628670][info][38632][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 18:44:56.628696][info][38632][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 18:44:59.038374][info][38632][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 18:44:59.038420][info][38632][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 18:44:59.038431][info][38632][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 18:44:59.038450][info][38632][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 18:44:59.038499][info][38632][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x2156B56CA80
+[03/23 18:44:59.038607][info][38632][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:44:59.043637][warning][30392][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**5 logs in 7447ms, last: 18:44:56.626789**]
+[03/23 18:45:40.778062][info][41812][DeviceManager.cpp:25] Current found device(s): (1)
+[03/23 18:45:40.778144][info][41812][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:45:40.778156][info][41812][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:45:42.805823][info][41812][DeviceManager.cpp:25] Current device(s) list: (1)
+[03/23 18:45:42.805854][info][41812][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:45:43.477919][info][41812][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:45:43.478145][info][41812][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x1C1D7CED8E0
+[03/23 18:45:43.524082][warning][41812][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:45:43.524531][info][41812][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:45:43.524590][info][41812][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:45:43.524616][info][41812][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:45:43.524632][info][41812][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:45:43.524647][info][41812][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:45:43.557551][info][41812][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:45:43.557628][info][41812][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:45:44.562002][warning][41812][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000
+[03/23 18:45:47.571012][warning][41812][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 3009ms**]
+[03/23 18:45:50.589365][info][41812][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 18:45:50.589389][info][41812][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 18:45:50.589412][info][41812][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 18:45:52.978722][info][41812][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 18:45:52.978783][info][41812][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 18:45:52.978794][info][41812][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 18:45:52.978813][info][41812][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 18:45:52.978865][info][41812][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x1C1D7CED8E0
+[03/23 18:45:52.978978][info][41812][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:45:53.898024][warning][33052][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 6327ms, last: 18:45:50.587978**]
+[03/23 18:46:27.573431][info][26212][DeviceManager.cpp:25] Current found device(s): (1)
+[03/23 18:46:27.573510][info][26212][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:46:27.573522][info][26212][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:46:29.600857][info][26212][DeviceManager.cpp:25] Current device(s) list: (1)
+[03/23 18:46:29.600901][info][26212][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB2.1
+[03/23 18:46:30.287156][info][26212][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:46:30.287458][info][26212][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x203674AA070
+[03/23 18:46:30.333543][warning][26212][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:46:30.333843][info][26212][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:46:30.333869][info][26212][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:46:30.333881][info][26212][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:46:30.333888][info][26212][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:46:30.333896][info][26212][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:46:30.366646][info][26212][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:46:30.366687][info][26212][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:46:31.375207][warning][26212][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000
+[03/23 18:46:34.385470][warning][26212][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 3010ms**]
+[03/23 18:46:37.411819][info][26212][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 18:46:37.411844][info][26212][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 18:46:37.411866][info][26212][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 18:46:39.830950][info][26212][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 18:46:39.831033][info][26212][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 18:46:39.831040][info][26212][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 18:46:39.831054][info][26212][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 18:46:39.831093][info][26212][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x203674AA070
+[03/23 18:46:39.831178][info][26212][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:46:40.759333][warning][43428][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=1000 [**3 logs in 6373ms, last: 18:46:37.410467**]
+[03/23 18:53:25.305849][info][20024][DeviceManager.cpp:25] Current found device(s): (1)
+[03/23 18:53:25.305943][info][20024][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 18:53:25.305960][info][20024][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:53:27.363611][info][20024][DeviceManager.cpp:25] Current device(s) list: (1)
+[03/23 18:53:27.363660][info][20024][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 18:53:27.657142][info][20024][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:53:27.657362][info][20024][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x22D7F587FD0
+[03/23 18:53:28.000592][warning][20024][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:53:28.000918][info][20024][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:53:28.000945][info][20024][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:53:28.000959][info][20024][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:53:28.000969][info][20024][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:53:28.000977][info][20024][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:53:28.007622][info][20024][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:53:28.007638][info][20024][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:53:28.114606][info][42788][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[03/23 18:53:32.271489][info][20024][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 18:53:32.271516][info][20024][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 18:53:32.271537][info][20024][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 18:53:32.843766][info][20024][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 18:53:32.843985][info][20024][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 18:53:32.844002][info][20024][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 18:53:32.844015][info][20024][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 18:53:32.844049][info][20024][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x22D7F587FD0
+[03/23 18:53:32.844141][info][20024][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:53:55.837253][info][31328][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 18:53:55.837342][info][31328][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:53:55.837349][info][31328][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 18:53:55.837358][info][31328][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:53:57.839891][info][31328][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 18:53:57.839922][info][31328][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:53:57.839969][info][31328][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 18:53:59.868138][info][31328][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8S16100G1 FW: 1.1.3
+[03/23 18:53:59.868370][info][31328][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x244258BB340
+[03/23 18:53:59.914663][warning][31328][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:53:59.914973][info][31328][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[03/23 18:53:59.914998][info][31328][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[03/23 18:53:59.915010][info][31328][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:53:59.915019][info][31328][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[03/23 18:53:59.915026][info][31328][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:53:59.946735][info][31328][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[03/23 18:53:59.946757][info][31328][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[03/23 18:54:00.511129][info][18316][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[03/23 18:54:05.538652][info][37392][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.236723fps
+[03/23 18:54:05.538835][info][36160][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.236723fps
+[03/23 18:54:10.037265][info][31328][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[03/23 18:54:10.037293][info][31328][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[03/23 18:54:10.037311][info][31328][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[03/23 18:54:10.613073][info][31328][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[03/23 18:54:10.613283][info][31328][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[03/23 18:54:10.613298][info][31328][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[03/23 18:54:10.613312][info][31328][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[03/23 18:54:10.613346][info][31328][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x244258BB340
+[03/23 18:54:10.613436][info][31328][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/23 18:54:19.278645][info][44540][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 18:54:19.278733][info][44540][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:54:19.278740][info][44540][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 18:54:19.278750][info][44540][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:54:21.326096][info][44540][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 18:54:21.326127][info][44540][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:54:21.326132][info][44540][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 18:54:21.598868][info][44540][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:54:21.599113][info][44540][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x2D893F56440
+[03/23 18:54:21.942728][warning][44540][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:54:21.943152][info][44540][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:54:21.943196][info][44540][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:54:21.943217][info][44540][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:54:21.943279][info][44540][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:54:21.943295][info][44540][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:54:21.950314][info][44540][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:54:21.950341][info][44540][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:54:22.048018][info][38248][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[03/23 18:54:27.064305][info][41480][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.296989fps
+[03/23 18:54:27.064430][info][11684][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.303032fps
+[03/23 18:54:32.081573][info][41480][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:54:32.081703][info][11684][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:54:33.780076][info][44540][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 18:54:33.780103][info][44540][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 18:54:33.780125][info][44540][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 18:54:34.351002][info][44540][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 18:54:34.351199][info][44540][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 18:54:34.351215][info][44540][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 18:54:34.351229][info][44540][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 18:54:34.351263][info][44540][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x2D893F56440
+[03/23 18:54:34.351358][info][44540][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 18:57:11.050852][info][37080][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 18:57:11.050925][info][37080][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:57:11.050930][info][37080][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 18:57:11.050939][info][37080][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 18:57:13.090533][info][37080][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 18:57:13.090562][info][37080][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 18:57:13.090567][info][37080][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 18:57:13.377775][info][37080][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 18:57:13.377997][info][37080][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x189CF7939E0
+[03/23 18:57:13.721380][warning][37080][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 18:57:13.721735][info][37080][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 18:57:13.721781][info][37080][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 18:57:13.721806][info][37080][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:57:13.721820][info][37080][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 18:57:13.721834][info][37080][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 18:57:13.729217][info][37080][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 18:57:13.729236][info][37080][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 18:57:13.820207][info][34144][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[03/23 18:57:18.835978][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.309074fps
+[03/23 18:57:18.836069][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.303032fps
+[03/23 18:57:23.853762][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 18:57:23.853871][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:57:28.871378][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 18:57:28.871501][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:57:33.888876][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:57:33.888968][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:57:38.906743][info][12536][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 18:57:38.906835][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:57:43.924073][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 18:57:43.924161][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:57:48.941452][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:57:48.941557][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:57:53.958916][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:57:53.959043][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:57:58.976579][info][12536][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 18:57:58.976671][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:58:03.994184][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 18:58:03.994288][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:58:09.011950][info][12536][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:58:09.012074][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:58:14.030190][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.085674fps
+[03/23 18:58:14.030275][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:58:19.047057][info][12536][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:58:19.047148][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:58:24.063830][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.103670fps
+[03/23 18:58:24.063979][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.103670fps
+[03/23 18:58:29.081378][info][34144][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 18:58:29.081482][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:58:34.099864][info][34144][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 18:58:34.099930][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:58:39.116151][info][34144][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:58:39.116232][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:58:44.134607][info][12536][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 18:58:44.134702][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:58:49.151719][info][12536][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:58:49.151830][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:58:54.169514][info][12536][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 18:58:54.169605][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:58:59.186574][info][12536][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:58:59.186680][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:59:04.204679][info][34144][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 18:59:04.204772][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:59:09.221637][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:59:09.221745][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:59:14.239845][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 18:59:14.239931][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:59:19.256481][info][34144][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:59:19.256567][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:59:24.273326][info][12536][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:59:24.273410][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:59:29.291006][info][34144][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:59:29.291097][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 18:59:34.308250][info][34144][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 18:59:34.308397][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:59:39.325384][info][34144][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:59:39.325493][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:59:44.342212][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:59:44.342298][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:59:49.359427][info][12536][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:59:49.359516][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:59:54.376277][info][34144][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:59:54.376382][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 18:59:59.393489][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 18:59:59.393579][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 19:00:04.410607][info][34144][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 19:00:04.410716][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 19:00:09.428119][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.091669fps
+[03/23 19:00:09.428238][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.091669fps
+[03/23 19:00:14.445270][info][44876][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.097666fps
+[03/23 19:00:14.445382][info][37808][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.097666fps
+[03/23 19:05:12.830686][info][17200][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 19:05:12.830795][info][17200][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 19:05:12.830805][info][17200][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 19:05:12.830814][info][17200][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 19:05:14.859226][info][17200][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 19:05:14.859284][info][17200][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 19:05:14.859292][info][17200][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 19:05:15.168451][info][17200][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 19:05:15.168568][info][17200][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x1D6D502DA80
+[03/23 19:05:15.538156][warning][17200][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 19:05:15.538381][info][17200][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/23 19:05:15.538397][info][17200][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/23 19:05:15.538405][info][17200][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 19:05:15.538413][info][17200][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/23 19:05:15.538420][info][17200][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 19:05:15.545481][info][17200][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/23 19:05:15.545498][info][17200][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/23 19:05:15.651722][info][35444][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[03/23 19:05:20.669104][info][39528][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.290953fps
+[03/23 19:05:20.669286][info][17372][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.290953fps
+[03/23 19:05:21.969797][info][17200][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/23 19:05:21.969838][info][17200][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/23 19:05:21.969859][info][17200][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/23 19:05:22.540170][info][17200][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/23 19:05:22.540398][info][17200][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/23 19:05:22.540419][info][17200][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/23 19:05:22.540436][info][17200][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/23 19:05:22.540475][info][17200][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x1D6D502DA80
+[03/23 19:05:22.540579][info][17200][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/23 19:05:37.767633][info][37204][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 19:05:37.767780][info][37204][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 19:05:37.767792][info][37204][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 19:05:37.767849][info][37204][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 19:05:39.816292][info][37204][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 19:05:39.816343][info][37204][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 19:05:39.816348][info][37204][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 19:05:40.486780][info][37204][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8S16100G1 FW: 1.1.3
+[03/23 19:05:40.486895][info][37204][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x292D5111D80
+[03/23 19:05:40.534181][warning][37204][ObException.cpp:8] Invalid input, No matched video stream profile found!
+[03/23 19:05:40.534394][info][37204][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[03/23 19:05:40.534410][info][37204][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[03/23 19:05:40.534418][info][37204][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 19:05:40.534426][info][37204][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[03/23 19:05:40.534433][info][37204][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[03/23 19:05:40.566307][info][37204][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[03/23 19:05:40.566343][info][37204][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[03/23 19:05:40.687571][info][39452][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[03/23 19:05:44.425823][info][37204][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[03/23 19:05:44.425863][info][37204][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[03/23 19:05:44.425883][info][37204][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[03/23 19:05:44.994785][info][37204][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[03/23 19:05:44.995086][info][37204][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[03/23 19:05:44.995111][info][37204][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[03/23 19:05:44.995129][info][37204][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[03/23 19:05:44.995171][info][37204][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x292D5111D80
+[03/23 19:05:44.995280][info][37204][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/23 20:33:28.955748][info][31152][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 20:33:28.955818][info][31152][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 20:33:28.955825][info][31152][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 20:33:28.955834][info][31152][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 20:33:30.983652][info][31152][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 20:33:30.983681][info][31152][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 20:33:30.983686][info][31152][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 20:35:07.965316][info][37072][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 20:35:07.965396][info][37072][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 20:35:07.965404][info][37072][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 20:35:07.965415][info][37072][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 20:35:09.995350][info][37072][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 20:35:09.995381][info][37072][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 20:35:09.995419][info][37072][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 20:35:10.602913][info][37072][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 20:35:10.602976][info][37072][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x20159EB87C0
+[03/23 20:35:31.699476][info][10608][DeviceManager.cpp:25] Current found device(s): (2)
+[03/23 20:35:31.699577][info][10608][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 20:35:31.699586][info][10608][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 20:35:31.699596][info][10608][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/23 20:35:33.740417][info][10608][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/23 20:35:33.740445][info][10608][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB2.1
+[03/23 20:35:33.740451][info][10608][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/23 20:35:34.018085][info][10608][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/23 20:35:34.018127][info][10608][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x2B098276280

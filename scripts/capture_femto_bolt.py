@@ -1,7 +1,7 @@
 """
 Running Instructions:
 
-python scripts/record_five_camera_pc_master_depth_only_csv.py
+python scripts/capture_femto_bolt.py
 """
 
 import csv
@@ -19,53 +19,43 @@ from pyk4a import (
     WiredSyncMode,
     connected_device_count,
 )
+from pyk4a.errors import K4ATimeoutException
 
-# Local setup: 5 devices total (1 MASTER + 4 SUBORDINATES).
-# Only the MASTER has depth enabled; all SUBORDINATES have depth disabled.
-# Current rig mapping from `k4arecorder.exe --list`:
-# device 1 = master, device 4 = subordinate_1, device 3 = subordinate_2,
-# device 2 = subordinate_3, device 0 = subordinate_4.
+# Local setup: 2 Femto Bolt devices total (1 MASTER + 1 SUBORDINATE).
+# Update the device_id values if `k4arecorder.exe --list` reports a different order.
 # IMPORTANT: subordinate delays must be globally unique across the full rig.
 LOCAL_DEVICES = [
     {"device_id": 0, "name": "master", "mode": WiredSyncMode.MASTER, "sub_delay_usec": 0},
-    {"device_id": 2, "name": "subordinate_1", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 200},
-    {"device_id": 3, "name": "subordinate_2", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 400},
-    {"device_id": 4, "name": "subordinate_3", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 600},
-    {"device_id": 1, "name": "subordinate_4", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 800},
+    {"device_id": 1, "name": "subordinate_1", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 200},
 ]
 
-OUT_DIR = Path("multi_mkv/five_camera_pc_master_depth_only")
+OUT_DIR = Path("multi_mkv/femto_bolt")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-MASTER_BASE_CONFIG = dict(
+BASE_CONFIG = dict(
     color_format=ImageFormat.COLOR_MJPG,
-    color_resolution=ColorResolution.RES_3072P,
-    depth_mode=DepthMode.WFOV_2X2BINNED,
+    color_resolution=ColorResolution.RES_1080P,
+    depth_mode=DepthMode.NFOV_UNBINNED,
     camera_fps=FPS.FPS_15,
-    synchronized_images_only=False,
-)
-
-SUBORDINATE_BASE_CONFIG = dict(
-    color_format=ImageFormat.COLOR_MJPG,
-    color_resolution=ColorResolution.RES_3072P,
-    depth_mode=DepthMode.OFF,
-    camera_fps=FPS.FPS_15,
-    synchronized_images_only=False,
+    synchronized_images_only=True,
 )
 
 
 def build_config(mode: WiredSyncMode, sub_delay_usec: int) -> Config:
     if mode == WiredSyncMode.MASTER:
-        return Config(**MASTER_BASE_CONFIG, wired_sync_mode=WiredSyncMode.MASTER)
-    return Config(
-        **SUBORDINATE_BASE_CONFIG,
-        wired_sync_mode=WiredSyncMode.SUBORDINATE,
-        subordinate_delay_off_master_usec=sub_delay_usec,
-    )
+        return Config(**BASE_CONFIG, wired_sync_mode=WiredSyncMode.MASTER)
+    if mode == WiredSyncMode.SUBORDINATE:
+        return Config(
+            **BASE_CONFIG,
+            wired_sync_mode=WiredSyncMode.SUBORDINATE,
+            subordinate_delay_off_master_usec=sub_delay_usec,
+        )
+    return Config(**BASE_CONFIG, wired_sync_mode=WiredSyncMode.STANDALONE)
 
 
 def main() -> None:
     available = connected_device_count()
+    
     if available < len(LOCAL_DEVICES):
         raise RuntimeError(f"Expected at least {len(LOCAL_DEVICES)} devices, found {available}")
 
@@ -81,11 +71,17 @@ def main() -> None:
 
     for c in start_order:
         c["device"].start()
+        sync_jack = c["device"].sync_jack_status
         print(
             f"started device_id={c['spec']['device_id']} serial={c['device'].serial} "
             f"name={c['spec']['name']} mode={c['spec']['mode'].name} "
-            f"sub_delay_usec={c['spec']['sub_delay_usec']} sync_jack={c['device'].sync_jack_status}"
+            f"sub_delay_usec={c['spec']['sub_delay_usec']} sync_jack={sync_jack}"
         )
+        if sync_jack == (False, False):
+            print(
+                f"warning: device {c['spec']['device_id']} reports no sync cables detected; "
+                "master/subordinate capture may timeout"
+            )
 
     outputs = []
     for c in cameras:
@@ -98,15 +94,7 @@ def main() -> None:
 
         ts_fh = open(ts_csv_path, "w", newline="", encoding="utf-8")
         ts_writer = csv.writer(ts_fh)
-        ts_writer.writerow(
-            [
-                "frame_idx",
-                "save_timestamp_ns",
-                "color_timestamp_usec",
-                "depth_timestamp_usec",
-                "depth_enabled",
-            ]
-        )
+        ts_writer.writerow(["frame_idx", "save_timestamp_ns", "color_timestamp_usec", "depth_timestamp_usec"])
 
         outputs.append(
             {
@@ -121,41 +109,37 @@ def main() -> None:
         )
 
     try:
-        print("Recording MKV on local 5-camera rig (master depth ON, subordinates depth OFF)...")
+        print("Recording MKV on local Femto Bolt rig with sidecar save timestamps...")
         print("Press CTRL-C to stop.")
         while True:
             for out in outputs:
-                spec = out["camera"]["spec"]
-                cap = out["camera"]["device"].get_capture(timeout=10000)
-
-                if cap.color is None:
-                    print(f"skipping frame on device {spec['device_id']} because color is missing")
+                try:
+                    cap = out["camera"]["device"].get_capture(timeout=10000)
+                except K4ATimeoutException:
+                    print(
+                        f"timed out waiting for frame on device {out['camera']['spec']['device_id']} "
+                        f"name={out['camera']['spec']['name']}"
+                    )
+                    continue
+                if cap.color is None or cap.depth is None:
+                    print(
+                        f"skipping frame on device {out['camera']['spec']['device_id']} "
+                        "because color/depth is missing"
+                    )
                     continue
 
-                is_master = spec["mode"] == WiredSyncMode.MASTER
-                if is_master and cap.depth is None:
-                    print(f"skipping frame on device {spec['device_id']} because depth is missing on master")
-                    continue
-
-                # Host timestamp taken right before persisting this capture.
                 save_timestamp_ns = time.time_ns()
-                depth_ts_usec = cap.depth_timestamp_usec if cap.depth is not None else ""
                 out["ts_writer"].writerow(
-                    [
-                        out["frame_idx"],
-                        save_timestamp_ns,
-                        cap.color_timestamp_usec,
-                        depth_ts_usec,
-                        int(is_master),
-                    ]
+                    [out["frame_idx"], save_timestamp_ns, cap.color_timestamp_usec, cap.depth_timestamp_usec]
                 )
                 out["record"].write_capture(cap)
                 out["frame_idx"] += 1
     except KeyboardInterrupt:
-        print("Stopping 5-camera recording")
+        print("Stopping Femto Bolt recording")
     finally:
         for out in outputs:
-            out["record"].flush()
+            if out["record"].captures_count > 0:
+                out["record"].flush()
             out["record"].close()
             out["ts_fh"].flush()
             out["ts_fh"].close()
