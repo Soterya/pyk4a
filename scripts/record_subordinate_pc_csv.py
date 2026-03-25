@@ -14,17 +14,34 @@ from pyk4a import (
     DepthMode,
     FPS,
     ImageFormat,
+    K4ATimeoutException,
     PyK4A,
     PyK4ARecord,
     WiredSyncMode,
     connected_device_count,
 )
 
-# Subordinate PC setup: 2 devices, both SUBORDINATE.
+# Subordinate PC setup: one local master and one local subordinate.
 # IMPORTANT: delays must be globally unique across all subordinates in the full rig.
 LOCAL_DEVICES = [
-    {"device_id": 1, "name": "master",      "mode": WiredSyncMode.MASTER,       "sub_delay_usec": 0},
-    {"device_id": 0, "name": "subordinate", "mode": WiredSyncMode.SUBORDINATE,  "sub_delay_usec": 200},
+    {
+        "device_id": 3,
+        "expected_serial": "000215604912",
+        "name": "master",
+        "mode": WiredSyncMode.MASTER,
+        "sub_delay_usec": 0,
+        "depth_mode": DepthMode.OFF,
+        "timestamp_attr": "color_timestamp_usec",
+    },
+    {
+        "device_id": 0,
+        "expected_serial": "000179494512",
+        "name": "subordinate",
+        "mode": WiredSyncMode.SUBORDINATE,
+        "sub_delay_usec": 200,
+        "depth_mode": DepthMode.OFF,
+        "timestamp_attr": "color_timestamp_usec",
+    },
 ]
 
 OUT_DIR = Path("multi_mkv/subordinate_pc")
@@ -33,17 +50,17 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 BASE_CONFIG = dict(
     color_format=ImageFormat.COLOR_MJPG,
     color_resolution=ColorResolution.RES_3072P,
-    depth_mode=DepthMode.WFOV_2X2BINNED,
     camera_fps=FPS.FPS_15,
-    synchronized_images_only=True,
+    synchronized_images_only=False,
 )
 
 
-def build_config(mode: WiredSyncMode, sub_delay_usec: int) -> Config:
+def build_config(mode: WiredSyncMode, sub_delay_usec: int, depth_mode: DepthMode) -> Config:
     if mode == WiredSyncMode.MASTER:
-        return Config(**BASE_CONFIG, wired_sync_mode=WiredSyncMode.MASTER)
+        return Config(**BASE_CONFIG, depth_mode=depth_mode, wired_sync_mode=WiredSyncMode.MASTER)
     return Config(
         **BASE_CONFIG,
+        depth_mode=depth_mode,
         wired_sync_mode=WiredSyncMode.SUBORDINATE,
         subordinate_delay_off_master_usec=sub_delay_usec,
     )
@@ -56,14 +73,25 @@ def main() -> None:
 
     cameras = []
     for spec in LOCAL_DEVICES:
-        cfg = build_config(spec["mode"], spec["sub_delay_usec"])
+        cfg = build_config(spec["mode"], spec["sub_delay_usec"], spec["depth_mode"])
         dev = PyK4A(config=cfg, device_id=spec["device_id"])
         cameras.append({"spec": spec, "device": dev, "config": cfg})
 
-    for c in cameras:
+    # Start subordinate first so it is ready and waiting when the local master begins driving sync.
+    start_order = [c for c in cameras if c["spec"]["mode"] == WiredSyncMode.SUBORDINATE]
+    start_order += [c for c in cameras if c["spec"]["mode"] == WiredSyncMode.MASTER]
+
+    for c in start_order:
         c["device"].start()
+        actual_serial = c["device"].serial
+        expected_serial = c["spec"]["expected_serial"]
+        if actual_serial != expected_serial:
+            raise RuntimeError(
+                f"Device mapping mismatch for {c['spec']['name']}: "
+                f"device_id={c['spec']['device_id']} expected serial {expected_serial}, got {actual_serial}"
+            )
         print(
-            f"started device_id={c['spec']['device_id']} serial={c['device'].serial} "
+            f"started device_id={c['spec']['device_id']} serial={actual_serial} "
             f"name={c['spec']['name']} mode={c['spec']['mode'].name} "
             f"sub_delay_usec={c['spec']['sub_delay_usec']} sync_jack={c['device'].sync_jack_status}"
         )
@@ -79,7 +107,7 @@ def main() -> None:
 
         ts_fh = open(ts_csv_path, "w", newline="", encoding="utf-8")
         ts_writer = csv.writer(ts_fh)
-        ts_writer.writerow(["frame_idx", "save_timestamp_ns", "depth_timestamp_usec"])
+        ts_writer.writerow(["frame_idx", "save_timestamp_ns", "device_timestamp_usec"])
 
         outputs.append(
             {
@@ -94,32 +122,43 @@ def main() -> None:
         )
 
     try:
-        print("Recording MKV on subordinate PC with sidecar save timestamps...")
+        print("Recording color-only MKV on subordinate PC (depth OFF on both devices)...")
         print("Press CTRL-C to stop.")
         while True:
             for out in outputs:
-                cap = out["camera"]["device"].get_capture(timeout=10000)
-                if cap.color is None or cap.depth is None:
+                try:
+                    cap = out["camera"]["device"].get_capture(timeout=10000)
+                except K4ATimeoutException:
                     print(
-                        f"skipping frame on device {out['camera']['spec']['device_id']} "
-                        "because color/depth is missing"
+                        f"timed out waiting for frame on device {out['camera']['spec']['device_id']} "
+                        f"serial={out['camera']['device'].serial}"
                     )
                     continue
 
+                if cap.color is None:
+                    print(
+                        f"skipping frame on device {out['camera']['spec']['device_id']} "
+                        "because color is missing"
+                    )
+                    continue
                 # Host timestamp taken right before persisting this capture.
                 save_timestamp_ns = time.time_ns()
-                out["ts_writer"].writerow([out["frame_idx"], save_timestamp_ns, cap.depth_timestamp_usec])
+                device_timestamp_usec = getattr(cap, out["camera"]["spec"]["timestamp_attr"])
+                out["ts_writer"].writerow([out["frame_idx"], save_timestamp_ns, device_timestamp_usec])
                 out["record"].write_capture(cap)
                 out["frame_idx"] += 1
     except KeyboardInterrupt:
         print("Stopping subordinate PC recording")
     finally:
         for out in outputs:
-            out["record"].flush()
-            out["record"].close()
-            out["ts_fh"].flush()
-            out["ts_fh"].close()
-            out["camera"]["device"].stop()
+            try:
+                if out["record"].captures_count > 0:
+                    out["record"].flush()
+            finally:
+                out["record"].close()
+                out["ts_fh"].flush()
+                out["ts_fh"].close()
+                out["camera"]["device"].stop()
             print(
                 f"saved {out['mkv_path']} frames={out['record'].captures_count} "
                 f"timestamps={out['ts_csv_path']}"
