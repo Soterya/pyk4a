@@ -25,17 +25,17 @@ from pyk4a import (
 # IMPORTANT: delays must be globally unique across all subordinates in the full rig.
 LOCAL_DEVICES = [
     {
-        "device_id": 3,
-        "expected_serial": "000215604912",
+        "device_id": 1,
+        "expected_serial": "000214794512",
         "name": "master",
         "mode": WiredSyncMode.MASTER,
         "sub_delay_usec": 0,
-        "depth_mode": DepthMode.OFF,
-        "timestamp_attr": "color_timestamp_usec",
+        "depth_mode": DepthMode.WFOV_2X2BINNED,
+        "timestamp_attr": "depth_timestamp_usec",
     },
     {
-        "device_id": 0,
-        "expected_serial": "000179494512",
+        "device_id": 2,
+        "expected_serial": "000883921812",
         "name": "subordinate",
         "mode": WiredSyncMode.SUBORDINATE,
         "sub_delay_usec": 200,
@@ -122,7 +122,7 @@ def main() -> None:
         )
 
     try:
-        print("Recording color-only MKV on subordinate PC (depth OFF on both devices)...")
+        print("Recording mixed MKV on subordinate PC (master depth ON, subordinate depth OFF)...")
         print("Press CTRL-C to stop.")
         while True:
             for out in outputs:
@@ -139,6 +139,12 @@ def main() -> None:
                     print(
                         f"skipping frame on device {out['camera']['spec']['device_id']} "
                         "because color is missing"
+                    )
+                    continue
+                if out["camera"]["spec"]["timestamp_attr"] == "depth_timestamp_usec" and cap.depth is None:
+                    print(
+                        f"skipping frame on device {out['camera']['spec']['device_id']} "
+                        "because depth is missing"
                     )
                     continue
                 # Host timestamp taken right before persisting this capture.
