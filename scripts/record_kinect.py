@@ -5,8 +5,10 @@ python scripts/record_five_camera_pc_master_depth_only_csv.py
 """
 
 import csv
+import os
 import time
 from pathlib import Path
+from datetime import datetime
 
 from pyk4a import (
     ColorResolution,
@@ -21,28 +23,28 @@ from pyk4a import (
 )
 
 # Local setup: 5 devices total (1 MASTER + 4 SUBORDINATES).
-# Only the MASTER has depth enabled; all SUBORDINATES have depth disabled.
+# MASTER records RGB + depth. SUBORDINATES record RGB only.
 # Current rig mapping from `k4arecorder.exe --list`:
-# device 1 = master, device 4 = subordinate_1, device 3 = subordinate_2,
-# device 2 = subordinate_3, device 0 = subordinate_4.
+# index 1 serial ...794512 = master
+# index 2 serial ...1812   = subordinate_1
+# index 4 serial ...5012   = subordinate_2
+# index 3 serial ...4912   = subordinate_3
+# index 0 serial ...4512   = subordinate_4
 # IMPORTANT: subordinate delays must be globally unique across the full rig.
 LOCAL_DEVICES = [
-    {"device_id": 0, "name": "master", "mode": WiredSyncMode.MASTER, "sub_delay_usec": 0},
+    {"device_id": 1, "name": "master", "mode": WiredSyncMode.MASTER, "sub_delay_usec": 0},
     {"device_id": 2, "name": "subordinate_1", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 200},
-    {"device_id": 3, "name": "subordinate_2", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 400},
-    {"device_id": 4, "name": "subordinate_3", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 600},
-    {"device_id": 1, "name": "subordinate_4", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 800},
+    {"device_id": 4, "name": "subordinate_2", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 400},
+    {"device_id": 3, "name": "subordinate_3", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 600},
+    {"device_id": 0, "name": "subordinate_4", "mode": WiredSyncMode.SUBORDINATE, "sub_delay_usec": 800},
 ]
-
-OUT_DIR = Path("multi_mkv/five_camera_pc_master_depth_only")
-OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 MASTER_BASE_CONFIG = dict(
     color_format=ImageFormat.COLOR_MJPG,
     color_resolution=ColorResolution.RES_3072P,
     depth_mode=DepthMode.WFOV_2X2BINNED,
     camera_fps=FPS.FPS_15,
-    synchronized_images_only=False,
+    synchronized_images_only=True,
 )
 
 SUBORDINATE_BASE_CONFIG = dict(
@@ -64,7 +66,22 @@ def build_config(mode: WiredSyncMode, sub_delay_usec: int) -> Config:
     )
 
 
+def make_recording_dir() -> tuple[Path, str]:
+    timestamp_str = os.environ.get("RECORD_SESSION_TIMESTAMP")
+    if not timestamp_str:
+        timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")
+    env_output_dir = os.environ.get("RECORD_SESSION_DIR")
+    if env_output_dir:
+        output_dir = Path(env_output_dir)
+    else:
+        output_dir = Path(__file__).resolve().parent.parent / "recordings" / f"session_{timestamp_str}"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    return output_dir, timestamp_str
+
+
 def main() -> None:
+    out_dir, timestamp_str = make_recording_dir()
+    stop_file_path = os.environ.get("RECORD_STOP_FILE")
     available = connected_device_count()
     if available < len(LOCAL_DEVICES):
         raise RuntimeError(f"Expected at least {len(LOCAL_DEVICES)} devices, found {available}")
@@ -89,8 +106,8 @@ def main() -> None:
 
     outputs = []
     for c in cameras:
-        serial = c["device"].serial
-        mkv_path = OUT_DIR / f"{c['spec']['name']}_dev{c['spec']['device_id']}_{serial}.mkv"
+        normalized_name = c["spec"]["name"].replace("_", "")
+        mkv_path = out_dir / f"kinect_{normalized_name}_{timestamp_str}.mkv"
         ts_csv_path = mkv_path.with_suffix(".save_timestamps.csv")
 
         record = PyK4ARecord(path=mkv_path, config=c["config"], device=c["device"])
@@ -124,6 +141,8 @@ def main() -> None:
         print("Recording MKV on local 5-camera rig (master depth ON, subordinates depth OFF)...")
         print("Press CTRL-C to stop.")
         while True:
+            if stop_file_path and os.path.exists(stop_file_path):
+                break
             for out in outputs:
                 spec = out["camera"]["spec"]
                 cap = out["camera"]["device"].get_capture(timeout=10000)

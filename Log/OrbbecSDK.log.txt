@@ -711,3 +711,653 @@
 [03/23 20:35:33.740451][info][10608][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
 [03/23 20:35:34.018085][info][10608][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
 [03/23 20:35:34.018127][info][10608][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x2B098276280
+[03/26 19:02:01.690990][info][34924][DeviceManager.cpp:25] Current found device(s): (2)
+[03/26 19:02:01.692005][info][34924][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/26 19:02:01.692021][info][34924][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/26 19:02:01.692031][info][34924][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/26 19:02:03.708689][info][34924][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/26 19:02:03.708742][info][34924][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/26 19:02:03.708756][info][34924][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/26 19:02:03.953011][info][34924][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8S16100G1 FW: 1.1.3
+[03/26 19:02:04.291529][info][34924][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x1B9A0CCD090
+[03/26 19:02:04.316235][info][34924][RawPhaseStreamer.cpp:482] Succeed to load depth engine plugin
+[03/26 19:02:04.533770][info][15512][RawPhaseStreamer.cpp:512] initNvramData: metadataHeader.size: 485712, metadataHeader.width: 0, metadataHeader.height: 0
+[03/26 19:02:05.633007][info][34924][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/26 19:02:05.639042][info][34924][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x1B99EF25CC0
+[03/26 19:02:05.671151][info][34924][RawPhaseStreamer.cpp:482] Succeed to load depth engine plugin
+[03/26 19:02:05.887860][info][48600][RawPhaseStreamer.cpp:512] initNvramData: metadataHeader.size: 489712, metadataHeader.width: 0, metadataHeader.height: 0
+[03/26 19:02:06.592102][info][34924][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[03/26 19:02:06.592132][info][34924][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[03/26 19:02:06.592146][info][34924][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:02:06.592156][info][34924][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[03/26 19:02:06.592163][info][34924][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:02:06.599293][info][34924][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:02:06.599327][info][34924][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Depth
+[03/26 19:02:06.599337][info][34924][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:02:06.803635][info][34924][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[03/26 19:02:06.803664][info][34924][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[03/26 19:02:06.803759][info][34924][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/26 19:02:06.803784][info][34924][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/26 19:02:06.803805][info][34924][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:02:06.803816][info][34924][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/26 19:02:06.803827][info][34924][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:02:06.816299][info][34924][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:02:06.816329][info][34924][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Depth
+[03/26 19:02:06.816338][info][34924][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:02:06.901909][info][34924][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/26 19:02:06.901935][info][34924][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/26 19:02:06.999015][info][15512][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[03/26 19:02:07.065036][info][44640][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[03/26 19:02:07.290117][info][14740][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Depth
+[03/26 19:02:07.620824][info][21180][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Depth
+[03/26 19:02:12.058398][info][48600][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=14.229249fps
+[03/26 19:02:12.058592][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=14.232061fps
+[03/26 19:02:12.125024][info][15512][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=13.833992fps
+[03/26 19:02:12.125216][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=13.833992fps
+[03/26 19:02:12.344356][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.235457fps
+[03/26 19:02:12.344464][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.235457fps
+[03/26 19:02:12.676843][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.229429fps
+[03/26 19:02:12.676947][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.232444fps
+[03/26 19:02:17.117314][info][44640][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=14.825065fps
+[03/26 19:02:17.117531][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=14.825065fps
+[03/26 19:02:17.183828][info][19136][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:02:17.184040][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:02:17.404326][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:02:17.404420][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.019763fps
+[03/26 19:02:17.739122][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.010862fps
+[03/26 19:02:17.739216][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.010862fps
+[03/26 19:02:22.175664][info][48600][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:02:22.175930][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.025702fps
+[03/26 19:02:22.242221][info][19136][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:02:22.242418][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.025702fps
+[03/26 19:02:22.463318][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:02:22.463425][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:02:22.794564][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.034619fps
+[03/26 19:02:22.794663][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.034619fps
+[03/26 19:02:27.234404][info][15512][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:02:27.234658][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:02:27.300926][info][48600][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:02:27.301053][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:02:27.520538][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.028672fps
+[03/26 19:02:27.520655][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.028672fps
+[03/26 19:02:27.853401][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:02:27.853514][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.022732fps
+[03/26 19:02:32.292598][info][18096][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:02:32.292783][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.025702fps
+[03/26 19:02:32.359203][info][19136][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:02:32.359468][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.025702fps
+[03/26 19:02:32.579471][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:02:32.579596][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:02:32.914555][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.016795fps
+[03/26 19:02:32.914685][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.016795fps
+[03/26 19:02:37.351085][info][24976][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:02:37.351377][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:02:37.419407][info][18096][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.019763fps
+[03/26 19:02:37.419578][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.019763fps
+[03/26 19:02:37.638598][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:02:37.638698][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:02:37.969034][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.034619fps
+[03/26 19:02:37.969134][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.034619fps
+[03/26 19:02:42.413101][info][24976][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.013829fps
+[03/26 19:02:42.413315][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.013829fps
+[03/26 19:02:42.478472][info][10760][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=14.825065fps
+[03/26 19:02:42.478602][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=14.825065fps
+[03/26 19:02:42.695913][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.028672fps
+[03/26 19:02:42.696023][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:02:43.028235][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:02:43.028348][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.022732fps
+[03/26 19:02:47.468787][info][10760][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=14.836796fps
+[03/26 19:02:47.469012][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=14.833860fps
+[03/26 19:02:47.535387][info][15512][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.028672fps
+[03/26 19:02:47.535597][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.028672fps
+[03/26 19:02:47.756004][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:02:47.756143][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.019763fps
+[03/26 19:02:48.090664][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.013829fps
+[03/26 19:02:48.090824][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.013829fps
+[03/26 19:02:52.527999][info][18096][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:02:52.528255][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:02:52.594583][info][24976][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:02:52.594788][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:02:52.814975][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:02:52.815069][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:02:53.146082][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.031645fps
+[03/26 19:02:53.146196][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.031645fps
+[03/26 19:02:57.587355][info][24976][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.019763fps
+[03/26 19:02:57.587573][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:02:57.653781][info][18096][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:02:57.653985][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:02:57.874388][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:02:57.874557][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:02:58.204813][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:02:58.204938][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.025702fps
+[03/26 19:03:02.646704][info][15512][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:02.646938][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:03:02.713010][info][10760][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:02.713196][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.019763fps
+[03/26 19:03:02.932773][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:03:02.932865][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:03:03.266593][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.013829fps
+[03/26 19:03:03.266680][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.013829fps
+[03/26 19:03:07.705899][info][19136][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:07.706134][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.019763fps
+[03/26 19:03:07.772207][info][24976][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.019763fps
+[03/26 19:03:07.772404][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:03:07.991621][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:03:07.991765][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:03:08.322807][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.031645fps
+[03/26 19:03:08.322933][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.031645fps
+[03/26 19:03:12.764825][info][48600][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:12.765036][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:03:12.831369][info][19136][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:12.831566][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:03:13.052226][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.016795fps
+[03/26 19:03:13.052362][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.016795fps
+[03/26 19:03:13.382930][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:03:13.383028][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.016795fps
+[03/26 19:03:17.823520][info][44640][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:17.823794][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.025702fps
+[03/26 19:03:17.889983][info][10760][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=14.827995fps
+[03/26 19:03:17.890184][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=14.825065fps
+[03/26 19:03:18.110391][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:03:18.110493][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:03:18.444512][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.013829fps
+[03/26 19:03:18.444631][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.016795fps
+[03/26 19:03:22.882644][info][44640][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:22.882847][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:03:22.949163][info][15512][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.019763fps
+[03/26 19:03:22.949355][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:03:23.169455][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:03:23.169554][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:03:23.501027][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.028672fps
+[03/26 19:03:23.501190][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.028672fps
+[03/26 19:03:27.941740][info][15512][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=14.825065fps
+[03/26 19:03:27.941970][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=14.825065fps
+[03/26 19:03:28.008328][info][10760][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:28.008633][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:03:28.227512][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:03:28.227642][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:03:28.559261][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:03:28.559344][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.025702fps
+[03/26 19:03:33.000840][info][19136][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:33.000965][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:03:33.067420][info][18096][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:33.067643][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:03:33.287213][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:03:33.287299][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.019763fps
+[03/26 19:03:33.621209][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.013829fps
+[03/26 19:03:33.621317][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.013829fps
+[03/26 19:03:38.059830][info][18096][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:38.060055][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.019763fps
+[03/26 19:03:38.126736][info][24976][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:38.126968][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:03:38.344541][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.028672fps
+[03/26 19:03:38.344641][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.028672fps
+[03/26 19:03:38.676703][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.034619fps
+[03/26 19:03:38.676829][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.034619fps
+[03/26 19:03:43.119043][info][44640][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.019763fps
+[03/26 19:03:43.119307][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:03:43.185552][info][48600][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:43.185767][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:03:43.407264][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.010862fps
+[03/26 19:03:43.407366][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.010862fps
+[03/26 19:03:43.736438][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:03:43.736574][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.019763fps
+[03/26 19:03:48.177995][info][18096][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:03:48.178245][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:03:48.244691][info][10760][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:48.245010][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.019763fps
+[03/26 19:03:48.465126][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:03:48.465299][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:03:48.800146][info][21180][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.007898fps
+[03/26 19:03:48.800250][info][36896][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.007898fps
+[03/26 19:03:53.238649][info][19136][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.016795fps
+[03/26 19:03:53.238792][info][12092][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.019763fps
+[03/26 19:03:53.303451][info][18096][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:03:53.303800][info][40792][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.025702fps
+[03/26 19:03:53.523653][info][14740][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:03:53.523743][info][42032][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:10:21.828623][info][41288][DeviceManager.cpp:25] Current found device(s): (2)
+[03/26 19:10:21.828700][info][41288][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/26 19:10:21.828708][info][41288][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/26 19:10:21.828717][info][41288][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/26 19:10:23.849631][info][41288][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/26 19:10:23.849669][info][41288][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/26 19:10:23.849675][info][41288][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/26 19:10:24.083053][info][41288][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8S16100G1 FW: 1.1.3
+[03/26 19:10:24.418865][warning][41288][ObException.hpp:48] Request failed, device response with unknown error!
+[03/26 19:11:06.492317][info][10640][DeviceManager.cpp:25] Current found device(s): (2)
+[03/26 19:11:06.492385][info][10640][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/26 19:11:06.492392][info][10640][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/26 19:11:06.492400][info][10640][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/26 19:11:08.537936][info][10640][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/26 19:11:08.537965][info][10640][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/26 19:11:08.537970][info][10640][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/26 19:11:08.771749][info][10640][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8S16100G1 FW: 1.1.3
+[03/26 19:11:09.107527][warning][10640][ObException.hpp:48] Request failed, device response with unknown error!
+[03/26 19:12:59.440782][info][35312][DeviceManager.cpp:25] Current found device(s): (2)
+[03/26 19:12:59.440856][info][35312][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/26 19:12:59.440863][info][35312][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/26 19:12:59.440899][info][35312][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/26 19:13:01.456507][info][35312][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/26 19:13:01.456536][info][35312][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/26 19:13:01.456542][info][35312][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/26 19:13:01.672057][info][35312][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8S16100G1 FW: 1.1.3
+[03/26 19:13:02.010882][info][35312][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x20928E1BF60
+[03/26 19:13:02.025033][info][35312][RawPhaseStreamer.cpp:482] Succeed to load depth engine plugin
+[03/26 19:13:02.242004][info][31776][RawPhaseStreamer.cpp:512] initNvramData: metadataHeader.size: 485712, metadataHeader.width: 0, metadataHeader.height: 0
+[03/26 19:13:03.327702][info][35312][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/26 19:13:03.332051][info][35312][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x20928E43A70
+[03/26 19:13:03.359958][info][35312][RawPhaseStreamer.cpp:482] Succeed to load depth engine plugin
+[03/26 19:13:03.576254][info][31776][RawPhaseStreamer.cpp:512] initNvramData: metadataHeader.size: 489712, metadataHeader.width: 0, metadataHeader.height: 0
+[03/26 19:13:04.274764][info][35312][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[03/26 19:13:04.274793][info][35312][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[03/26 19:13:04.274808][info][35312][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:13:04.274817][info][35312][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[03/26 19:13:04.274825][info][35312][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:13:04.282033][info][35312][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:13:04.282058][info][35312][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Depth
+[03/26 19:13:04.282066][info][35312][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:13:04.689780][info][35312][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[03/26 19:13:04.689807][info][35312][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[03/26 19:13:04.689883][info][35312][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/26 19:13:04.689899][info][35312][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/26 19:13:04.689912][info][35312][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:13:04.689921][info][35312][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/26 19:13:04.689931][info][35312][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:13:04.703222][info][35312][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:13:04.703249][info][35312][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Depth
+[03/26 19:13:04.703258][info][35312][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:13:05.057478][info][35312][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/26 19:13:05.057511][info][35312][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/26 19:13:05.148717][info][33404][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[03/26 19:13:05.171137][info][45024][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Depth
+[03/26 19:13:05.414856][info][31776][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[03/26 19:13:05.568521][info][41392][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Depth
+[03/26 19:13:10.206825][info][31776][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=14.037169fps
+[03/26 19:13:10.207024][info][34348][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=14.037169fps
+[03/26 19:13:10.228781][info][45024][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.226418fps
+[03/26 19:13:10.228915][info][45972][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.226418fps
+[03/26 19:13:10.473050][info][9996][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=13.836726fps
+[03/26 19:13:10.473290][info][15016][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=13.839462fps
+[03/26 19:13:10.624822][info][41392][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.229429fps
+[03/26 19:13:10.624946][info][14996][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.232444fps
+[03/26 19:13:13.084883][info][35312][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[03/26 19:13:13.084927][info][35312][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[03/26 19:13:13.084956][info][35312][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Depth
+[03/26 19:13:13.925371][info][35312][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Depth
+[03/26 19:13:13.925669][info][35312][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Depth
+[03/26 19:13:13.925703][info][35312][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[03/26 19:13:14.877344][info][35312][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[03/26 19:13:14.877556][info][35312][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[03/26 19:13:14.877575][info][35312][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[03/26 19:13:14.877598][info][35312][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[03/26 19:13:14.877619][info][35312][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/26 19:13:14.877624][info][35312][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/26 19:13:14.877639][info][35312][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Depth
+[03/26 19:13:15.727971][info][35312][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Depth
+[03/26 19:13:15.728260][info][35312][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Depth
+[03/26 19:13:15.728287][info][35312][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/26 19:13:18.199541][info][35312][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/26 19:13:18.199768][info][35312][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/26 19:13:18.199783][info][35312][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/26 19:13:18.199802][info][35312][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/26 19:13:18.202214][info][35312][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x20928E1BF60
+[03/26 19:13:18.202281][info][35312][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/26 19:13:18.202291][info][35312][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/26 19:13:18.202383][info][35312][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/26 19:13:18.202408][info][35312][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/26 19:13:18.202416][info][35312][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/26 19:13:18.225420][info][35312][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x20928E43A70
+[03/26 19:13:18.225489][info][35312][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/26 19:13:18.225501][info][35312][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/26 19:13:18.225615][info][35312][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/26 19:13:18.225649][info][35312][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/26 19:13:18.225658][info][35312][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/26 19:13:26.511985][info][36176][DeviceManager.cpp:25] Current found device(s): (2)
+[03/26 19:13:26.512082][info][36176][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/26 19:13:26.512091][info][36176][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/26 19:13:26.512100][info][36176][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/26 19:13:28.555872][info][36176][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/26 19:13:28.555902][info][36176][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/26 19:13:28.555907][info][36176][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/26 19:13:28.795065][info][36176][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8S16100G1 FW: 1.1.3
+[03/26 19:13:29.131909][info][36176][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x23B08CE48C0
+[03/26 19:13:29.146520][info][36176][RawPhaseStreamer.cpp:482] Succeed to load depth engine plugin
+[03/26 19:13:29.363627][info][26684][RawPhaseStreamer.cpp:512] initNvramData: metadataHeader.size: 485712, metadataHeader.width: 0, metadataHeader.height: 0
+[03/26 19:13:30.455930][info][36176][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/26 19:13:30.458239][info][36176][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x23B08E33140
+[03/26 19:13:30.486090][info][36176][RawPhaseStreamer.cpp:482] Succeed to load depth engine plugin
+[03/26 19:13:30.702514][info][26684][RawPhaseStreamer.cpp:512] initNvramData: metadataHeader.size: 489712, metadataHeader.width: 0, metadataHeader.height: 0
+[03/26 19:13:31.402520][info][36176][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[03/26 19:13:31.402550][info][36176][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[03/26 19:13:31.402568][info][36176][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:13:31.402577][info][36176][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[03/26 19:13:31.402584][info][36176][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:13:31.409705][info][36176][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:13:31.409732][info][36176][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Depth
+[03/26 19:13:31.409740][info][36176][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:13:31.579135][info][36176][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[03/26 19:13:31.579157][info][36176][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[03/26 19:13:31.579230][info][36176][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/26 19:13:31.579243][info][36176][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/26 19:13:31.579256][info][36176][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:13:31.579264][info][36176][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/26 19:13:31.579302][info][36176][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:13:31.591815][info][36176][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:13:31.591845][info][36176][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Depth
+[03/26 19:13:31.591853][info][36176][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:13:31.672006][info][36176][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/26 19:13:31.672031][info][36176][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/26 19:13:31.809972][info][26684][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[03/26 19:13:31.810431][info][37000][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[03/26 19:13:31.964768][info][13980][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Depth
+[03/26 19:13:32.495905][info][37800][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Depth
+[03/26 19:13:36.867994][info][26684][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=13.839462fps
+[03/26 19:13:36.868074][info][24452][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=14.037169fps
+[03/26 19:13:36.868253][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=13.842198fps
+[03/26 19:13:36.868313][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=14.039945fps
+[03/26 19:13:37.020828][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.229429fps
+[03/26 19:13:37.020921][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.232444fps
+[03/26 19:13:37.552011][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.229429fps
+[03/26 19:13:37.552121][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.229429fps
+[03/26 19:13:41.926762][info][34484][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:13:41.926814][info][26684][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:13:41.926967][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.025702fps
+[03/26 19:13:41.927042][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:13:42.081653][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.016795fps
+[03/26 19:13:42.081748][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.016795fps
+[03/26 19:13:42.612276][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.016795fps
+[03/26 19:13:42.612386][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.019763fps
+[03/26 19:13:46.985651][info][26684][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:13:46.985700][info][34484][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:13:46.985909][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:13:46.985952][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.025702fps
+[03/26 19:13:47.140468][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:13:47.140566][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:13:47.671113][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:13:47.671208][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.022732fps
+[03/26 19:13:52.044481][info][25628][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:13:52.044532][info][37000][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:13:52.044683][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:13:52.044730][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:13:52.198960][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:13:52.199055][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:13:52.729745][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:13:52.729874][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.025702fps
+[03/26 19:13:57.103496][info][26684][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:13:57.103680][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:13:57.103856][info][34484][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:13:57.103974][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:13:57.257344][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:13:57.257422][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:13:57.788629][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:13:57.788731][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.022732fps
+[03/26 19:14:02.162630][info][42120][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:14:02.162676][info][24452][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=14.825065fps
+[03/26 19:14:02.162823][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:14:02.162860][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=14.825065fps
+[03/26 19:14:02.317395][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:14:02.317486][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.019763fps
+[03/26 19:14:02.846956][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:14:02.847057][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.022732fps
+[03/26 19:14:07.221723][info][24452][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:14:07.221771][info][26684][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=14.825065fps
+[03/26 19:14:07.221980][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:14:07.222023][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=14.822135fps
+[03/26 19:14:07.376897][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:14:07.376989][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:14:07.906118][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:14:07.906247][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.022732fps
+[03/26 19:14:12.280404][info][34484][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:14:12.280455][info][24452][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:14:12.280683][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.025702fps
+[03/26 19:14:12.280739][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:14:12.434868][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:14:12.434959][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:14:12.966341][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:14:12.966476][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.019763fps
+[03/26 19:14:17.338613][info][42120][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:14:17.338683][info][24452][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:14:17.338833][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.025702fps
+[03/26 19:14:17.338886][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.025702fps
+[03/26 19:14:17.491695][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.028672fps
+[03/26 19:14:17.491820][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.028672fps
+[03/26 19:14:18.023640][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.028672fps
+[03/26 19:14:18.023780][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.028672fps
+[03/26 19:14:22.397463][info][34484][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:14:22.397547][info][26684][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:14:22.397734][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:14:22.397765][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:14:22.550708][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:14:22.550838][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:14:23.081860][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:14:23.081966][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.025702fps
+[03/26 19:14:27.454900][info][25628][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.028672fps
+[03/26 19:14:27.454946][info][26684][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.028672fps
+[03/26 19:14:27.455101][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.025702fps
+[03/26 19:14:27.455137][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.025702fps
+[03/26 19:14:27.608529][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:14:27.608613][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:14:28.139475][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:14:28.139597][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.025702fps
+[03/26 19:14:32.513692][info][42120][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=14.825065fps
+[03/26 19:14:32.513738][info][24452][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:14:32.513912][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.025702fps
+[03/26 19:14:32.513983][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=14.827995fps
+[03/26 19:14:32.667953][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:14:32.668046][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.019763fps
+[03/26 19:14:33.198651][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:14:33.198789][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.022732fps
+[03/26 19:14:37.572228][info][42120][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:14:37.572285][info][25628][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=14.825065fps
+[03/26 19:14:37.572433][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:14:37.572470][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=14.825065fps
+[03/26 19:14:37.726159][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:14:37.726293][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:14:38.256457][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:14:38.256551][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.025702fps
+[03/26 19:14:42.630699][info][26684][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:14:42.630745][info][42120][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:14:42.630894][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.025702fps
+[03/26 19:14:42.630932][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.025702fps
+[03/26 19:14:42.785527][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:14:42.785631][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:14:43.316028][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:14:43.316127][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.019763fps
+[03/26 19:14:47.691208][info][24452][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.016795fps
+[03/26 19:14:47.691316][info][41652][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.016795fps
+[03/26 19:14:47.691506][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.016795fps
+[03/26 19:14:47.691557][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.016795fps
+[03/26 19:14:47.844966][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:14:47.845070][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.019763fps
+[03/26 19:14:48.377945][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.016795fps
+[03/26 19:14:48.378035][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.013829fps
+[03/26 19:14:52.749159][info][24452][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:14:52.749208][info][34484][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:14:52.749367][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.025702fps
+[03/26 19:14:52.749412][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.025702fps
+[03/26 19:14:52.903586][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:14:52.903705][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:14:53.434795][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.028672fps
+[03/26 19:14:53.434943][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.031645fps
+[03/26 19:14:57.808417][info][41652][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:14:57.808463][info][37000][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:14:57.808625][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:14:57.808663][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:14:57.963162][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:14:57.963259][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.019763fps
+[03/26 19:14:58.493691][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:14:58.493802][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.022732fps
+[03/26 19:15:02.867469][info][24452][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:02.867528][info][37000][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:02.867677][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:02.867721][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:03.021844][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:15:03.021956][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:15:03.555050][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.013829fps
+[03/26 19:15:03.555171][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.013829fps
+[03/26 19:15:07.926505][info][24452][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=14.825065fps
+[03/26 19:15:07.926577][info][41652][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:07.926764][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=14.825065fps
+[03/26 19:15:07.926868][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:08.081498][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:15:08.081580][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.019763fps
+[03/26 19:15:08.611690][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.031645fps
+[03/26 19:15:08.611757][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.031645fps
+[03/26 19:15:12.985480][info][34484][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:12.985534][info][42120][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=14.825065fps
+[03/26 19:15:12.985711][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:12.985833][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=14.825065fps
+[03/26 19:15:13.138887][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.028672fps
+[03/26 19:15:13.138989][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.028672fps
+[03/26 19:15:13.670901][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:15:13.671009][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.019763fps
+[03/26 19:15:18.044414][info][42120][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:18.044479][info][41652][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:18.044671][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:18.044715][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:18.198254][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:15:18.198355][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.019763fps
+[03/26 19:15:18.728668][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:15:18.728771][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.028672fps
+[03/26 19:15:23.103236][info][26684][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:23.103286][info][42120][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:23.103454][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:23.103535][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:23.257273][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:15:23.257387][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:15:23.788388][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:15:23.788488][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.019763fps
+[03/26 19:15:28.162173][info][37000][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:28.162218][info][25628][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:28.162373][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:28.162415][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:28.317004][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:15:28.317097][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.019763fps
+[03/26 19:15:28.847234][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:15:28.847335][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.022732fps
+[03/26 19:15:33.221456][info][26684][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:33.221504][info][25628][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:33.221658][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:33.221759][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:33.373525][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.028672fps
+[03/26 19:15:33.373633][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.031645fps
+[03/26 19:15:33.905198][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:15:33.905366][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.025702fps
+[03/26 19:15:38.280508][info][37000][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:38.280563][info][41652][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:38.280684][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:38.280766][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:38.432738][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:15:38.432847][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:15:38.963285][info][37800][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:15:38.963383][info][45636][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.025702fps
+[03/26 19:15:43.339185][info][26684][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:43.339233][info][41652][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:15:43.339371][info][15524][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:43.339441][info][14888][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:15:43.494269][info][13980][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.013829fps
+[03/26 19:15:43.494352][info][7508][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.013829fps
+[03/26 19:16:47.751196][info][11884][DeviceManager.cpp:25] Current found device(s): (2)
+[03/26 19:16:47.751272][info][11884][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/26 19:16:47.751279][info][11884][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/26 19:16:47.751288][info][11884][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/26 19:16:49.785140][info][11884][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/26 19:16:49.785169][info][11884][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/26 19:16:49.785174][info][11884][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/26 19:16:49.994774][info][11884][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8S16100G1 FW: 1.1.3
+[03/26 19:16:50.333618][info][11884][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x1725D83A350
+[03/26 19:16:50.347697][info][11884][RawPhaseStreamer.cpp:482] Succeed to load depth engine plugin
+[03/26 19:16:50.564617][info][30736][RawPhaseStreamer.cpp:512] initNvramData: metadataHeader.size: 485712, metadataHeader.width: 0, metadataHeader.height: 0
+[03/26 19:16:51.656470][info][11884][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/26 19:16:51.661076][info][11884][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x1725D840E80
+[03/26 19:16:51.689219][info][11884][RawPhaseStreamer.cpp:482] Succeed to load depth engine plugin
+[03/26 19:16:51.905759][info][38456][RawPhaseStreamer.cpp:512] initNvramData: metadataHeader.size: 489712, metadataHeader.width: 0, metadataHeader.height: 0
+[03/26 19:16:52.604726][info][11884][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[03/26 19:16:52.604756][info][11884][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[03/26 19:16:52.604770][info][11884][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:16:52.604779][info][11884][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[03/26 19:16:52.604787][info][11884][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:16:52.611441][info][11884][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:16:52.611469][info][11884][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Depth
+[03/26 19:16:52.611518][info][11884][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:16:53.096156][info][11884][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[03/26 19:16:53.096181][info][11884][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[03/26 19:16:53.096259][info][11884][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/26 19:16:53.096273][info][11884][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/26 19:16:53.096291][info][11884][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:16:53.096301][info][11884][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/26 19:16:53.096310][info][11884][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/26 19:16:53.108771][info][11884][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:16:53.108802][info][11884][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Depth
+[03/26 19:16:53.108811][info][11884][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/26 19:16:53.501973][info][32376][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Depth
+[03/26 19:16:53.610283][info][30736][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[03/26 19:16:53.634774][info][11884][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/26 19:16:53.634805][info][11884][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/26 19:16:54.010128][info][44328][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[03/26 19:16:54.030849][info][44732][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Depth
+[03/26 19:16:58.556304][info][32376][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.232444fps
+[03/26 19:16:58.556407][info][13928][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.235457fps
+[03/26 19:16:58.669179][info][44328][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=14.034394fps
+[03/26 19:16:58.669459][info][31508][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=14.104093fps
+[03/26 19:16:59.068536][info][30736][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=13.839462fps
+[03/26 19:16:59.068758][info][38436][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=13.839462fps
+[03/26 19:16:59.087534][info][44732][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.226418fps
+[03/26 19:16:59.087630][info][43816][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.229429fps
+[03/26 19:17:03.615850][info][32376][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:17:03.615942][info][13928][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.022732fps
+[03/26 19:17:03.728006][info][38456][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:17:03.728211][info][31508][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:17:04.135768][info][38284][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=14.999014fps
+[03/26 19:17:04.135925][info][38436][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=14.999014fps
+[03/26 19:17:04.150325][info][44732][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.010862fps
+[03/26 19:17:04.150408][info][43816][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.010862fps
+[03/26 19:17:08.674978][info][32376][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:17:08.675130][info][13928][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.019763fps
+[03/26 19:17:08.786612][info][43672][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=14.825065fps
+[03/26 19:17:08.786879][info][31508][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=14.827995fps
+[03/26 19:17:09.185901][info][30736][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=14.851484fps
+[03/26 19:17:09.186107][info][38436][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=14.848544fps
+[03/26 19:17:09.205375][info][44732][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.034619fps
+[03/26 19:17:09.205475][info][43816][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.034619fps
+[03/26 19:17:13.732343][info][32376][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:17:13.732454][info][13928][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.028672fps
+[03/26 19:17:13.845426][info][38284][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:17:13.845635][info][31508][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:17:14.244857][info][38456][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:17:14.245110][info][38436][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:17:14.263616][info][44732][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:17:14.263709][info][43816][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.025702fps
+[03/26 19:17:18.791977][info][32376][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:17:18.792114][info][13928][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.019763fps
+[03/26 19:17:18.904015][info][30736][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:17:18.904166][info][31508][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:17:19.303314][info][38456][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:17:19.303517][info][38436][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.025702fps
+[03/26 19:17:19.326646][info][44732][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.010862fps
+[03/26 19:17:19.326743][info][43816][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.010862fps
+[03/26 19:17:23.850590][info][32376][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.022732fps
+[03/26 19:17:23.850690][info][13928][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:17:23.963078][info][30736][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.019763fps
+[03/26 19:17:23.963263][info][31508][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:17:24.362378][info][30736][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:17:24.362579][info][38436][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:17:24.381432][info][44732][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.034619fps
+[03/26 19:17:24.381542][info][43816][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.034619fps
+[03/26 19:17:28.908831][info][32376][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.025702fps
+[03/26 19:17:28.908919][info][13928][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.025702fps
+[03/26 19:17:29.022085][info][30736][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:17:29.022258][info][31508][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.022732fps
+[03/26 19:17:29.421391][info][49004][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:17:29.421680][info][38436][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:17:29.441064][info][44732][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:17:29.441158][info][43816][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.019763fps
+[03/26 19:17:33.968972][info][32376][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=15.019763fps
+[03/26 19:17:33.969056][info][13928][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=15.016795fps
+[03/26 19:17:34.080804][info][49004][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=15.025702fps
+[03/26 19:17:34.080998][info][31508][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=15.025702fps
+[03/26 19:17:34.480230][info][43672][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=15.022732fps
+[03/26 19:17:34.480423][info][38436][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=15.022732fps
+[03/26 19:17:34.503278][info][44732][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=15.013829fps
+[03/26 19:17:34.503369][info][43816][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=15.013829fps
