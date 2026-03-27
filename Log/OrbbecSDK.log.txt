@@ -2226,3 +2226,74 @@
 [03/27 11:42:49.646528][info][19540][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
 [03/27 11:42:49.646566][info][19540][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
 [03/27 11:42:49.646576][info][19540][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/27 11:55:50.709522][info][45760][DeviceManager.cpp:25] Current found device(s): (2)
+[03/27 11:55:50.709597][info][45760][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/27 11:55:50.709603][info][45760][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/27 11:55:50.709611][info][45760][DeviceManager.cpp:339] Enable net device enumeration: true
+[03/27 11:55:52.732445][info][45760][DeviceManager.cpp:25] Current device(s) list: (2)
+[03/27 11:55:52.732472][info][45760][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8S16100G1, Connection: USB3.1
+[03/27 11:55:52.732477][info][45760][DeviceManager.cpp:34] 	- Name: FemtoBolt, PID: 0x066b, SN/ID: CL8RC5301ZH, Connection: USB3.1
+[03/27 11:55:53.232440][info][45760][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8S16100G1 FW: 1.1.3
+[03/27 11:55:53.234856][info][45760][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x256AA288630
+[03/27 11:55:53.255567][info][45760][RawPhaseStreamer.cpp:482] Succeed to load depth engine plugin
+[03/27 11:55:53.473145][info][39176][RawPhaseStreamer.cpp:512] initNvramData: metadataHeader.size: 485712, metadataHeader.width: 0, metadataHeader.height: 0
+[03/27 11:55:54.563717][info][45760][DeviceManager.cpp:194] Device created successfully! Name: Femto Bolt, PID: 0x066b, SN/ID: CL8RC5301ZH FW: 1.1.3
+[03/27 11:55:54.565823][info][45760][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x256AA442370
+[03/27 11:55:54.595145][info][45760][RawPhaseStreamer.cpp:482] Succeed to load depth engine plugin
+[03/27 11:55:54.812442][info][11488][RawPhaseStreamer.cpp:512] initNvramData: metadataHeader.size: 489712, metadataHeader.width: 0, metadataHeader.height: 0
+[03/27 11:55:55.515320][info][45760][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[03/27 11:55:55.515350][info][45760][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[03/27 11:55:55.515364][info][45760][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/27 11:55:55.515373][info][45760][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[03/27 11:55:55.515381][info][45760][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/27 11:55:55.523058][info][45760][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/27 11:55:55.523082][info][45760][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Depth
+[03/27 11:55:55.523090][info][45760][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/27 11:55:55.707406][info][45760][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[03/27 11:55:55.707430][info][45760][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[03/27 11:55:55.707503][info][45760][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[03/27 11:55:55.707517][info][45760][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[03/27 11:55:55.707530][info][45760][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/27 11:55:55.707538][info][45760][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[03/27 11:55:55.707547][info][45760][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 15}
+[03/27 11:55:55.720740][info][45760][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/27 11:55:55.720770][info][45760][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Depth
+[03/27 11:55:55.720779][info][45760][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 15}
+[03/27 11:55:55.797747][info][45760][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[03/27 11:55:55.797782][info][45760][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[03/27 11:55:55.924562][info][39176][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[03/27 11:55:55.924972][info][44588][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[03/27 11:55:56.212818][info][15364][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Depth
+[03/27 11:55:56.612752][info][48548][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Depth
+[03/27 11:55:57.789534][info][45760][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[03/27 11:55:57.789569][info][45760][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[03/27 11:55:57.789584][info][45760][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Depth
+[03/27 11:55:58.526878][info][45760][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Depth
+[03/27 11:55:58.527104][info][45760][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Depth
+[03/27 11:55:58.527129][info][45760][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[03/27 11:55:59.531210][info][45760][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[03/27 11:55:59.531413][info][45760][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[03/27 11:55:59.531429][info][45760][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[03/27 11:55:59.531449][info][45760][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[03/27 11:55:59.531510][info][45760][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[03/27 11:55:59.531514][info][45760][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[03/27 11:55:59.531524][info][45760][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Depth
+[03/27 11:56:00.295728][info][45760][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Depth
+[03/27 11:56:00.295950][info][45760][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Depth
+[03/27 11:56:00.295974][info][45760][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[03/27 11:56:02.785159][info][45760][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[03/27 11:56:02.785383][info][45760][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[03/27 11:56:02.785402][info][45760][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[03/27 11:56:02.785423][info][45760][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[03/27 11:56:02.787625][info][45760][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x256AA288630
+[03/27 11:56:02.787693][info][45760][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/27 11:56:02.787704][info][45760][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/27 11:56:02.787807][info][45760][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/27 11:56:02.787832][info][45760][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/27 11:56:02.787840][info][45760][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[03/27 11:56:02.805787][info][45760][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x256AA442370
+[03/27 11:56:02.805856][info][45760][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/27 11:56:02.805866][info][45760][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/27 11:56:02.805988][info][45760][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/27 11:56:02.806034][info][45760][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[03/27 11:56:02.806043][info][45760][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed

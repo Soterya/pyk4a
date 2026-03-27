@@ -16,8 +16,8 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT_DIR = SCRIPT_DIR.parent
 
-KINECT_SCRIPT = SCRIPT_DIR / "record_kinect.py"
-ORBBEC_SCRIPT = SCRIPT_DIR / "record_orbbec.py"
+KINECT_SCRIPT = SCRIPT_DIR / "record_kinect_final.py"
+ORBBEC_SCRIPT = SCRIPT_DIR / "record_orbbec_final.py"
 
 
 def parse_args():
