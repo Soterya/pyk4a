@@ -93,7 +93,7 @@ def main() -> None:
         cameras.append({"spec": spec, "device": dev, "config": cfg})
 
     # Start local subordinates first, then the local master.
-    start_order = [c for c in cameras if c["spec"]["mode"] == WiredSyncMode.SUBORDINATE]
+    start_order = [c for c  in cameras if c["spec"]["mode"] == WiredSyncMode.SUBORDINATE]
     start_order += [c for c in cameras if c["spec"]["mode"] == WiredSyncMode.MASTER]
 
     for c in start_order:
