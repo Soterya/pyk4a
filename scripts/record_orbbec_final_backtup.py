@@ -180,27 +180,14 @@ def on_new_frame_callback(frames: FrameSet, index: int):
     if color_frame is None and depth_frame is None:
         return
 
-    host_callback_start_ns = time.time_ns()
     save_timestamp_ns = time.time_ns()
-    color_timestamp_us = color_frame.get_timestamp_us() if color_frame is not None else ""
-    color_system_timestamp_us = (
-        color_frame.get_system_timestamp_us() if color_frame is not None else ""
-    )
-    depth_timestamp_us = depth_frame.get_timestamp_us() if depth_frame is not None else ""
-    depth_system_timestamp_us = (
-        depth_frame.get_system_timestamp_us() if depth_frame is not None else ""
-    )
     with timestamp_locks[index]:
         timestamp_writers[index].writerow(
             [
                 frame_indices[index],
-                host_callback_start_ns,
                 save_timestamp_ns,
-                color_timestamp_us,
-                color_system_timestamp_us,
-                depth_timestamp_us,
-                depth_system_timestamp_us,
-                int(color_frame is not None),
+                color_frame.get_timestamp_us() if color_frame is not None else "",
+                depth_frame.get_timestamp_us() if depth_frame is not None else "",
                 int(depth_frame is not None),
             ]
         )
@@ -241,13 +228,9 @@ def main():
         timestamp_writers[i].writerow(
             [
                 "frame_idx",
-                "host_callback_start_ns",
                 "save_timestamp_ns",
                 "color_timestamp_usec",
-                "color_system_timestamp_usec",
                 "depth_timestamp_usec",
-                "depth_system_timestamp_usec",
-                "color_present",
                 "depth_enabled",
             ]
         )

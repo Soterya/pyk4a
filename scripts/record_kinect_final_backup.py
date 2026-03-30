@@ -118,14 +118,9 @@ def main() -> None:
         ts_writer.writerow(
             [
                 "frame_idx",
-                "host_capture_start_ns",
                 "save_timestamp_ns",
-                "host_write_complete_ns",
                 "color_timestamp_usec",
-                "color_system_timestamp_nsec",
                 "depth_timestamp_usec",
-                "depth_system_timestamp_nsec",
-                "color_present",
                 "depth_enabled",
             ]
         )
@@ -150,7 +145,6 @@ def main() -> None:
                 break
             for out in outputs:
                 spec = out["camera"]["spec"]
-                host_capture_start_ns = time.time_ns()
                 cap = out["camera"]["device"].get_capture(timeout=10000)
 
                 if cap.color is None:
@@ -161,34 +155,20 @@ def main() -> None:
                 if is_master and cap.depth is None:
                     print(f"skipping frame on device {spec['device_id']} because depth is missing on master")
                     continue
-                has_depth = is_master and cap.depth is not None
 
                 # Host timestamp taken right before persisting this capture.
                 save_timestamp_ns = time.time_ns()
-                color_ts_usec = cap.color_timestamp_usec if cap.color is not None else ""
-                color_system_ts_ns = (
-                    cap.color_system_timestamp_nsec if cap.color is not None else ""
-                )
-                depth_ts_usec = cap.depth_timestamp_usec if has_depth else ""
-                depth_system_ts_ns = (
-                    cap.depth_system_timestamp_nsec if has_depth else ""
-                )
-                out["record"].write_capture(cap)
-                host_write_complete_ns = time.time_ns()
+                depth_ts_usec = cap.depth_timestamp_usec if cap.depth is not None else ""
                 out["ts_writer"].writerow(
                     [
                         out["frame_idx"],
-                        host_capture_start_ns,
                         save_timestamp_ns,
-                        host_write_complete_ns,
-                        color_ts_usec,
-                        color_system_ts_ns,
+                        cap.color_timestamp_usec,
                         depth_ts_usec,
-                        depth_system_ts_ns,
-                        int(cap.color is not None),
-                        int(has_depth),
+                        int(is_master),
                     ]
                 )
+                out["record"].write_capture(cap)
                 out["frame_idx"] += 1
     except KeyboardInterrupt:
         print("Stopping 5-camera recording")
