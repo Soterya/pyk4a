@@ -24,7 +24,7 @@ from pyk4a import (
 )
 
 # --- debugging ---
-import ipdb as pdb
+import pdb
 
 
 # -----------------------------------------------------------

@@ -23,7 +23,7 @@ from pyorbbecsdk import (
 MAX_DEVICES = 2
 WFOV_BINNED_DEPTH_WIDTH = 512
 WFOV_BINNED_DEPTH_HEIGHT = 512
-RECORD_FPS = 15
+RECORD_FPS = 30
 
 multi_device_sync_config = {}
 recorders: List[RecordDevice | None] = [None for _ in range(MAX_DEVICES)]
