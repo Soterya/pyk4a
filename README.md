@@ -1,115 +1,149 @@
-# pyk4a
+# Data Workflow Reference
 
-![CI](https://github.com/etiennedub/pyk4a/workflows/CI/badge.svg)
-[![codecov](https://codecov.io/gh/etiennedub/pyk4a/branch/master/graph/badge.svg)](https://codecov.io/gh/etiennedub/pyk4a)
+## Data Capture
 
-![pyk4a](https://github.com/etiennedub/pyk4a/raw/master/figs/pyk4a_logo.png) 
+### 1) Main capture entrypoint
+Run the unified capture launcher:
 
-
-This library is a simple and pythonic wrapper in Python 3 for the Azure-Kinect-Sensor-SDK.
-
-Images are returned as numpy arrays and behave like python objects.
-
-This approach incurs almost no overhead in terms of CPU, memory or other resources.
-It also simplifies usage. Kinect C api image buffers are directly reused and image releases are performed automatically by the python garbage collector.
-
-Homepage: https://github.com/etiennedub/pyk4a/
-
-## Prerequisites
-The [Azure-Kinect-Sensor-SDK](https://github.com/microsoft/Azure-Kinect-Sensor-SDK) is required to build this library.
-To use the SDK, refer to the installation instructions [here](https://github.com/microsoft/Azure-Kinect-Sensor-SDK/blob/develop/docs/usage.md).
-
-
-## Install
-
-### Linux
-
-Linux specific installation instructions [here](https://docs.microsoft.com/en-us/azure/kinect-dk/sensor-sdk-download#linux-installation-instructions)
-
-Install both packages `libk4a<major>.<minor>` and `libk4a<major>.<minor>-dev`. The latter contains the headers and CMake files to build pyk4a.
-
-Make sure your `LD_LIBRARY_PATH` contains the directory of k4a.lib
-
-```shell
-pip install pyk4a
+```bash
+python scripts/capture.py
 ```
 
-### Windows
+What it does:
+- Reads `scripts/config/config.json`.
+- Launches `scripts/record_kinect_final_with_capture.py` when `launch.run_kinect=true`.
+- Launches `scripts/record_orbbec_final_with_capture.py` when `launch.run_orbbec=true`.
+- Creates a session folder under `recordings/` by default.
+- Stops automatically after configured duration, or manually with `Ctrl+C`.
 
-In most cases `pip install pyk4a` is enough to install this package.
+### 2) Related capture scripts
+- `scripts/record_kinect_final_with_capture.py`: records Kinect MKVs + per-frame timestamp CSV sidecars.
+- `scripts/record_orbbec_final_with_capture.py`: records Orbbec BAGs + per-frame timestamp CSV sidecars.
+- `scripts/config/config.json`: shared capture configuration used by `capture.py`.
+- `scripts/config/multi_device_sync_config.json`: optional Orbbec serial-specific sync config reference.
 
-When using an anaconda environment, you need to set the environment variable `CONDA_DLL_SEARCH_MODIFICATION_ENABLE=1` https://github.com/conda/conda/issues/10897
+### 3) Tuning parameters in `scripts/config/config.json`
+Session control (`session`):
+- `duration_seconds`: total capture duration.
+- `recordings_root`: base output folder (default `recordings`).
+- `session_prefix`: session folder prefix.
+- `graceful_shutdown_seconds`: wait time after stop signal before forced termination.
+- `stop_grace_seconds`: force-kill grace period.
 
-Because of the numerous issues received from Windows users, the installer ([setup.py](setup.py)) automatically detects the kinect SDK path.
+Launch toggles (`launch`):
+- `run_kinect`: enable/disable Kinect recorder.
+- `run_orbbec`: enable/disable Orbbec recorder.
 
-When the installer is not able to find the path, the following snippet can help.
-Make sure you replace the paths in these instructions with your own kinect SDK path. It is important to replace 1.4.1 with your installed version of the SDK.
-```shell
-pip install pyk4a --no-use-pep517 --global-option=build_ext --global-option="-IC:\Program Files\Azure Kinect SDK v1.4.1\sdk\include" --global-option="-LC:\Program Files\Azure Kinect SDK v1.4.1\sdk\windows-desktop\amd64\release\lib"
+Kinect tuning (`kinect`):
+- `devices[]`: per-device mapping (`device_id`, `name`, `mode`, `sub_delay_usec`).
+- `master_base_config`: master camera settings (`color_format`, `color_resolution`, `depth_mode`, `camera_fps`, `synchronized_images_only`).
+- `subordinate_base_config`: subordinate settings (typically depth off).
+
+Orbbec tuning (`orbbec`):
+- `max_devices`: expected Orbbec device count.
+- `wfov_binned_depth_width`, `wfov_binned_depth_height`: required depth profile.
+- `record_fps`: recording FPS.
+- `multi_device_sync.devices[]`: per-serial sync mode and timing fields.
+
+### 4) Input directory expected by processing
+Processing scripts expect data under:
+
+```text
+data/person_x/session_x/data_collection/
 ```
 
-During execution, `k4a.dll` is required. The automatic detection should be able to find this file.
-It is also possible to specify the DLL's directory with the environment variable `K4A_DLL_DIR`.
-If `K4A_DLL_DIR` is used, the automatic DLL search is not performed.
+Recommended layout:
 
-## Example
-
-For a basic example displaying the first frame, you can run this code:
-
-```
-from pyk4a import PyK4A
-
-# Load camera with the default config
-k4a = PyK4A()
-k4a.start()
-
-# Get the next capture (blocking function)
-capture = k4a.get_capture()
-img_color = capture.color
-
-# Display with pyplot
-from matplotlib import pyplot as plt
-plt.imshow(img_color[:, :, 2::-1]) # BGRA to RGB
-plt.show()
-```
-
-Otherwise, a more avanced example is available in the [example](https://github.com/etiennedub/pyk4a/tree/master/example) folder.
-To execute it [opencv-python](https://github.com/skvark/opencv-python) is required.
-```
-git clone https://github.com/etiennedub/pyk4a.git
-cd pyk4a/example
-python viewer.py
+```text
+data/
+└── person_x/
+    └── session_x/
+        ├── rgb_calibration/
+        ├── depth_calibration/
+        └── data_collection/
+            ├── rgb_depth_data/
+            │   ├── kinect_master.mkv
+            │   ├── kinect_master.save_timestamps.csv
+            │   ├── kinect_subordinate1.mkv
+            │   ├── kinect_subordinate1.save_timestamps.csv
+            │   ├── kinect_subordinate2.mkv
+            │   ├── kinect_subordinate2.save_timestamps.csv
+            │   ├── kinect_subordinate3.mkv
+            │   ├── kinect_subordinate3.save_timestamps.csv
+            │   ├── kinect_subordinate4.mkv
+            │   ├── kinect_subordinate4.save_timestamps.csv
+            │   ├── orbbec_master.bag
+            │   ├── orbbec_master.save_timestamps.csv
+            │   ├── orbbec_subordinate.bag
+            │   └── orbbec_subordinate.save_timestamps.csv
+            └── pressure_data/
+                └── pressure_map_save_*.csv
 ```
 
-## Documentation
+Typical contents inside `data_collection/`:
+- `rgb_depth_data/` (Kinect MKVs + sidecars, Orbbec BAGs + sidecars)
+- `pressure_data/` (pressure CSV files)
 
-No documentation is available but all functinos are properly [type hinted](https://docs.python.org/3/library/typing.html).
-The code of the main class is a good place to start[PyK4A](https://github.com/etiennedub/pyk4a/blob/master/pyk4a/pyk4a.py).
+## Data Processing
 
-You can also follow the various [example folder](example) scripts as reference.
+All commands below are run from repo root:
 
-
-## Bug Reports
-Submit an issue and please include as much details as possible.
-
-Make sure to use the search function on closed issues, especially if your problem is related to installing on [windows](https://github.com/etiennedub/pyk4a/issues?q=windows+).
-
-
-## Module Development
-
-1) Install required packages: `make setup`
-
-2) Install local pyk4a version (compiles pyk4a.cpp): `make build`
-
-## Contribution
-
-Feel free to send pull requests. The develop branch should be used.
-
-Please rebuild, format, check code quality and run tests before submitting a pull request:
-```shell script
-make build
-make fmt lint
-make test
+```bash
+cd /home/rutwik/korus-ml-devel/devel/pyk4a
 ```
 
-Note: you need `clang-format` tool(v 11.0+) for formatting CPP code. 
+Use your target person/session in place of `person_1/session_1`.
+
+### Run order
+1. Export Kinect synced data.
+2. Export Orbbec synced data.
+3. Export Pressure synced data.
+4. Build Kinect-Orbbec timestamp mapping (and optional plots).
+5. Build Pressure-Kinect-Orbbec timestamp mapping (and optional plots).
+
+### Commands
+1. Kinect export:
+
+```bash
+python scripts/export_kinect_synced_by_device_ts_data.py data/person_1/session_1/data_collection
+```
+
+2. Orbbec export:
+
+```bash
+python scripts/export_orbbec_synced_by_device_ts_data.py data/person_1/session_1/data_collection
+```
+
+3. Pressure export:
+
+```bash
+python scripts/export_pressure_synced_by_device_ts_data.py data/person_1/session_1/data_collection
+```
+
+4. Kinect-Orbbec mapping (CSV only):
+
+```bash
+python scripts/plot_kinect_orbbec_from_exported_data.py outputs/person_1/session_1
+```
+
+5. Pressure-Kinect-Orbbec mapping (CSV only):
+
+```bash
+python scripts/plot_kinect_orbbec_pressure_from_exported_data.py outputs/person_1/session_1
+```
+
+If you also want plot images, add `--plot` to steps 4 and 5.
+
+### Output layout
+Exports and synced outputs are saved under:
+
+```text
+outputs/person_x/session_x/
+```
+
+Main subfolders:
+- `kinect/`
+- `orbbec/`
+- `pressure/`
+- `synced_data_from_kinect_orbbec/`
+- `synced_data_from_pressure_kinect_orbbec/`

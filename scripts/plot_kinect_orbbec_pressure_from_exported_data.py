@@ -66,7 +66,10 @@ def parse_args():
     parser.add_argument(
         "session_output_dir",
         type=Path,
-        help="Session output directory containing kinect/, orbbec/, pressure/.",
+        help=(
+            "Session output directory containing kinect/, orbbec/, pressure/, or a raw data "
+            "path under data/person_x/session_x/data_collection."
+        ),
     )
     parser.add_argument(
         "--max-delta-ms",
@@ -118,6 +121,46 @@ def parse_args():
         help="If set, generate composite plot images. Otherwise only generate mapping CSV.",
     )
     return parser.parse_args()
+
+
+def get_person_session_subpath_from_data_path(path: Path) -> Path:
+    resolved = path.resolve()
+    parts = resolved.parts
+    for i in range(len(parts) - 1, -1, -1):
+        if parts[i] == "data" and i + 2 < len(parts):
+            person_part = parts[i + 1]
+            session_part = parts[i + 2]
+            if person_part.startswith("person_") and session_part.startswith("session_"):
+                return Path(person_part) / session_part
+    for i in range(len(parts) - 1, -1, -1):
+        if parts[i] == "data" and i + 1 < len(parts):
+            return Path(parts[i + 1])
+    return Path(resolved.name)
+
+
+def resolve_session_output_dir(session_output_dir_arg: Path) -> Path:
+    session_output_dir = session_output_dir_arg.resolve()
+    if (
+        (session_output_dir / "kinect").is_dir()
+        and (session_output_dir / "orbbec").is_dir()
+        and (session_output_dir / "pressure").is_dir()
+    ):
+        return session_output_dir
+
+    repo_root = Path(__file__).resolve().parent.parent
+    person_session_subpath = get_person_session_subpath_from_data_path(session_output_dir)
+    inferred_output_dir = repo_root / "outputs" / person_session_subpath
+    if (
+        (inferred_output_dir / "kinect").is_dir()
+        and (inferred_output_dir / "orbbec").is_dir()
+        and (inferred_output_dir / "pressure").is_dir()
+    ):
+        return inferred_output_dir
+
+    raise RuntimeError(
+        "Could not resolve session output directory with kinect/, orbbec/, pressure/ folders from: "
+        f"{session_output_dir_arg}"
+    )
 
 
 def find_nearest_index(target: int, sorted_values: list[int]):
@@ -362,9 +405,7 @@ def main():
     if args.depth_max_mm <= args.depth_min_mm:
         raise ValueError("--depth-max-mm must be greater than --depth-min-mm")
 
-    session_output_dir = args.session_output_dir.resolve()
-    if not session_output_dir.is_dir():
-        raise RuntimeError(f"Session output directory does not exist: {session_output_dir}")
+    session_output_dir = resolve_session_output_dir(args.session_output_dir)
 
     kinect_root = session_output_dir / "kinect"
     orbbec_root = session_output_dir / "orbbec"

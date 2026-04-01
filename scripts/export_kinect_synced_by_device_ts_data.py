@@ -17,7 +17,14 @@ def parse_args():
             "master/subordinates and full-resolution master depth NPZ."
         )
     )
-    parser.add_argument("session_dir", type=Path, help="Path to session folder with Kinect MKVs + sidecars.")
+    parser.add_argument(
+        "session_dir",
+        type=Path,
+        help=(
+            "Path to Kinect input directory. Supports data/person_x/session_x/data_collection, "
+            ".../rgb_depth_data, or legacy session layouts."
+        ),
+    )
     parser.add_argument("--every-n", type=int, default=1, help="Keep every Nth reference frame.")
     parser.add_argument("--max-frames", type=int, default=None, help="Optional cap on exported frames.")
     parser.add_argument(
@@ -71,6 +78,12 @@ def discover_feeds(session_dir: Path):
     candidate_roots = []
     if session_dir.name == "rgb_depth_data":
         candidate_roots.append(session_dir)
+    data_collection_rgb_depth_dir = session_dir / "data_collection" / "rgb_depth_data"
+    if data_collection_rgb_depth_dir.exists():
+        candidate_roots.append(data_collection_rgb_depth_dir)
+    data_collection_dir = session_dir / "data_collection"
+    if data_collection_dir.exists():
+        candidate_roots.append(data_collection_dir)
     rgb_depth_dir = session_dir / "rgb_depth_data"
     if rgb_depth_dir.exists():
         candidate_roots.append(rgb_depth_dir)
@@ -325,13 +338,19 @@ def extract_intrinsics_json(playback: PyK4APlayback) -> dict:
     return out
 
 
-def get_session_name_from_data_path(session_dir: Path) -> str:
+def get_person_session_subpath_from_data_path(session_dir: Path) -> Path:
     resolved = session_dir.resolve()
     parts = resolved.parts
     for i in range(len(parts) - 1, -1, -1):
+        if parts[i] == "data" and i + 2 < len(parts):
+            person_part = parts[i + 1]
+            session_part = parts[i + 2]
+            if person_part.startswith("person_") and session_part.startswith("session_"):
+                return Path(person_part) / session_part
+    for i in range(len(parts) - 1, -1, -1):
         if parts[i] == "data" and i + 1 < len(parts):
-            return parts[i + 1]
-    return resolved.name
+            return Path(parts[i + 1])
+    return Path(resolved.name)
 
 
 def main():
@@ -359,8 +378,8 @@ def main():
         raise RuntimeError("No synced matches found. Try increasing --max-delta-ms.")
 
     repo_root = Path(__file__).resolve().parent.parent
-    session_name = get_session_name_from_data_path(session_dir)
-    output_dir = repo_root / "outputs" / session_name / "kinect"
+    person_session_subpath = get_person_session_subpath_from_data_path(session_dir)
+    output_dir = repo_root / "outputs" / person_session_subpath / "kinect"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     rgb_master_dir = output_dir / "kinect_rgb_master"

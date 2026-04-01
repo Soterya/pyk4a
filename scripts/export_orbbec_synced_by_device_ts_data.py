@@ -34,7 +34,7 @@ def parse_args():
         nargs="+",
         help=(
             "Either <master.bag> <subordinate.bag> or one directory containing exactly two .bag files "
-            "(supports rgb_depth_data layout)."
+            "(supports data/person_x/session_x/data_collection and rgb_depth_data layouts)."
         ),
     )
     parser.add_argument("--every-n", type=int, default=1, help="Keep every Nth frameset from each bag.")
@@ -54,18 +54,30 @@ def parse_args():
     return parser.parse_args()
 
 
-def get_session_name_from_data_path(path: Path) -> str:
+def get_person_session_subpath_from_data_path(path: Path) -> Path:
     resolved = path.resolve()
     parts = resolved.parts
     for i in range(len(parts) - 1, -1, -1):
+        if parts[i] == "data" and i + 2 < len(parts):
+            person_part = parts[i + 1]
+            session_part = parts[i + 2]
+            if person_part.startswith("person_") and session_part.startswith("session_"):
+                return Path(person_part) / session_part
+    for i in range(len(parts) - 1, -1, -1):
         if parts[i] == "data" and i + 1 < len(parts):
-            return parts[i + 1]
-    return resolved.name
+            return Path(parts[i + 1])
+    return Path(resolved.name)
 
 
 def find_bag_dir_from_input_dir(input_dir: Path) -> Path:
     if input_dir.name == "rgb_depth_data":
         return input_dir
+    data_collection_rgb_depth_dir = input_dir / "data_collection" / "rgb_depth_data"
+    if data_collection_rgb_depth_dir.exists():
+        return data_collection_rgb_depth_dir
+    data_collection_dir = input_dir / "data_collection"
+    if data_collection_dir.exists():
+        return data_collection_dir
     rgb_depth_data_dir = input_dir / "rgb_depth_data"
     if rgb_depth_data_dir.exists():
         return rgb_depth_data_dir
@@ -359,8 +371,8 @@ def build_matches(
 
 def resolve_output_dir(camera1_bag: Path) -> Path:
     repo_root = Path(__file__).resolve().parent.parent
-    session_name = get_session_name_from_data_path(camera1_bag)
-    return repo_root / "outputs" / session_name / "orbbec"
+    person_session_subpath = get_person_session_subpath_from_data_path(camera1_bag)
+    return repo_root / "outputs" / person_session_subpath / "orbbec"
 
 
 def save_matches(

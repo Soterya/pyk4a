@@ -36,7 +36,8 @@ def parse_args():
         type=Path,
         default=Path("data"),
         help=(
-            "CSV path, pressure_data directory, or session directory containing pressure_data."
+            "CSV path, pressure_data directory, or a session directory "
+            "(supports data/person_x/session_x/data_collection layout)."
         ),
     )
     parser.add_argument("--every-n", type=int, default=1, help="Keep every Nth frame.")
@@ -73,13 +74,19 @@ def build_pressure_grid(values: np.ndarray) -> np.ndarray:
     return grid
 
 
-def get_session_name_from_data_path(path: Path) -> str:
+def get_person_session_subpath_from_data_path(path: Path) -> Path:
     resolved = path.resolve()
     parts = resolved.parts
     for i in range(len(parts) - 1, -1, -1):
+        if parts[i] == "data" and i + 2 < len(parts):
+            person_part = parts[i + 1]
+            session_part = parts[i + 2]
+            if person_part.startswith("person_") and session_part.startswith("session_"):
+                return Path(person_part) / session_part
+    for i in range(len(parts) - 1, -1, -1):
         if parts[i] == "data" and i + 1 < len(parts):
-            return parts[i + 1]
-    return resolved.name
+            return Path(parts[i + 1])
+    return Path(resolved.name)
 
 
 def resolve_pressure_csv(input_path: Path) -> Path:
@@ -89,8 +96,13 @@ def resolve_pressure_csv(input_path: Path) -> Path:
     if not input_path.exists():
         raise FileNotFoundError(f"Input path does not exist: {input_path}")
 
-    # Accept session directory layout: <session>/pressure_data
+    # Accept session directory layout:
+    # - <session>/data_collection/pressure_data
+    # - <session>/pressure_data
     if input_path.is_dir() and input_path.name != "pressure_data":
+        data_collection_pressure_dir = input_path / "data_collection" / "pressure_data"
+        if data_collection_pressure_dir.exists() and data_collection_pressure_dir.is_dir():
+            input_path = data_collection_pressure_dir
         pressure_data_dir = input_path / "pressure_data"
         if pressure_data_dir.exists() and pressure_data_dir.is_dir():
             input_path = pressure_data_dir
@@ -149,8 +161,8 @@ def main():
         raise RuntimeError("No records selected after --every-n/--max-frames filtering.")
 
     repo_root = Path(__file__).resolve().parent.parent
-    session_name = get_session_name_from_data_path(csv_path)
-    output_dir = repo_root / "outputs" / session_name / "pressure"
+    person_session_subpath = get_person_session_subpath_from_data_path(csv_path)
+    output_dir = repo_root / "outputs" / person_session_subpath / "pressure"
     pressure_data_dir = output_dir / "pressure_map_data"
     output_dir.mkdir(parents=True, exist_ok=True)
     pressure_data_dir.mkdir(parents=True, exist_ok=True)
