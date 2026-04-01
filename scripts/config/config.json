@@ -1,0 +1,70 @@
+{
+  "session": {
+    "duration_seconds": 20,
+    "recordings_root": "recordings",
+    "session_prefix": "session",
+    "graceful_shutdown_seconds": 90,
+    "stop_grace_seconds": 10
+  },
+  "launch": {
+    "run_kinect": true,
+    "run_orbbec": true
+  },
+  "kinect": {
+    "devices": [
+      {
+        "device_id": 1,
+        "name": "master",
+        "mode": "MASTER",
+        "sub_delay_usec": 0
+      },
+      {
+        "device_id": 2,
+        "name": "subordinate_1",
+        "mode": "SUBORDINATE",
+        "sub_delay_usec": 200
+      },
+      {
+        "device_id": 4,
+        "name": "subordinate_2",
+        "mode": "SUBORDINATE",
+        "sub_delay_usec": 400
+      },
+      {
+        "device_id": 3,
+        "name": "subordinate_3",
+        "mode": "SUBORDINATE",
+        "sub_delay_usec": 600
+      },
+      {
+        "device_id": 0,
+        "name": "subordinate_4",
+        "mode": "SUBORDINATE",
+        "sub_delay_usec": 800
+      }
+    ],
+    "master_base_config": {
+      "color_format": "COLOR_MJPG",
+      "color_resolution": "RES_3072P",
+      "depth_mode": "WFOV_2X2BINNED",
+      "camera_fps": "FPS_15",
+      "synchronized_images_only": true
+    },
+    "subordinate_base_config": {
+      "color_format": "COLOR_MJPG",
+      "color_resolution": "RES_3072P",
+      "depth_mode": "OFF",
+      "camera_fps": "FPS_15",
+      "synchronized_images_only": false
+    }
+  },
+  "orbbec": {
+    "max_devices": 2,
+    "wfov_binned_depth_width": 512,
+    "wfov_binned_depth_height": 512,
+    "record_fps": 30,
+    "multi_device_sync": {
+      "devices": []
+    }
+  }
+}
