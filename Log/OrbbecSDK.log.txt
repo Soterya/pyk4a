@@ -5725,3 +5725,635 @@
 [04/01 17:04:28.643300][info][9902][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
 [04/01 17:04:28.643305][info][9902][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
 [04/01 17:04:28.644831][warning][13213][Pipeline.cpp:305] [CL8RC5301ZH] Wait for frame timeout, you can try to increase the wait time! current timeout=100 [**20 logs in 2004ms, last: 17:04:28.642917**]
+[04/01 19:35:07.202616][warning][8930][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 19:35:07.202742][warning][8930][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 19:35:07.203375][warning][8930][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 19:35:07.203382][warning][8930][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 19:35:07.203384][warning][8930][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 19:35:07.204070][info][8930][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x64E31E835F60
+[04/01 19:35:07.204577][warning][8930][SensorBase.cpp:377] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:35:07.204655][warning][8930][SensorBase.cpp:240] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 19:35:07.204677][warning][8930][SensorBase.cpp:377] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:35:07.204679][warning][8930][SensorBase.cpp:240] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 19:35:07.204685][info][8930][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[04/01 19:35:07.204836][info][8930][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[04/01 19:35:07.204856][info][8930][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:35:07.204860][info][8930][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[04/01 19:35:07.204862][info][8930][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:35:07.204928][info][8930][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:35:07.204932][info][8930][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Depth
+[04/01 19:35:07.204934][info][8930][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:35:07.204952][info][8930][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[04/01 19:35:07.204954][info][8930][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[04/01 19:35:07.205273][info][9158][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[04/01 19:35:07.539342][info][9159][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Depth
+[04/01 19:35:08.321567][info][8930][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[04/01 19:35:08.321598][info][8930][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[04/01 19:35:08.321619][info][8930][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Depth
+[04/01 19:35:08.321663][info][8930][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Depth
+[04/01 19:35:08.321703][info][8930][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Depth
+[04/01 19:35:08.321708][info][8930][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[04/01 19:35:08.321741][info][8930][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[04/01 19:35:08.321759][info][8930][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[04/01 19:35:08.321761][info][8930][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[04/01 19:35:08.321765][info][8930][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[04/01 19:35:08.321792][info][8930][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x64E31E835F60
+[04/01 19:35:08.322231][info][8930][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 19:35:08.322237][info][8930][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 19:35:08.338947][warning][8930][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 19:35:08.338958][warning][8930][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 19:35:08.339017][warning][8930][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 19:35:08.339021][warning][8930][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 19:35:08.339023][warning][8930][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 19:35:08.339160][info][8930][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x64E31E83B7E0
+[04/01 19:35:08.339249][warning][8930][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:35:08.339252][warning][8930][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 19:35:08.339268][warning][8930][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:35:08.339270][warning][8930][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 19:35:08.339276][info][8930][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[04/01 19:35:08.339281][info][8930][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[04/01 19:35:08.339286][info][8930][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:35:08.339289][info][8930][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[04/01 19:35:08.339291][info][8930][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:35:08.339309][info][8930][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:35:08.339312][info][8930][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Depth
+[04/01 19:35:08.339313][info][8930][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:35:08.339338][info][8930][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[04/01 19:35:08.339340][info][8930][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[04/01 19:35:08.339553][info][9170][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[04/01 19:35:08.405130][info][9171][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Depth
+[04/01 19:35:09.418498][info][8930][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[04/01 19:35:09.418521][info][8930][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[04/01 19:35:09.418538][info][8930][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Depth
+[04/01 19:35:09.418588][info][8930][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Depth
+[04/01 19:35:09.418627][info][8930][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Depth
+[04/01 19:35:09.418630][info][8930][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[04/01 19:35:09.418676][info][8930][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[04/01 19:35:09.418693][info][8930][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[04/01 19:35:09.418695][info][8930][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[04/01 19:35:09.418698][info][8930][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[04/01 19:35:09.418727][info][8930][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x64E31E83B7E0
+[04/01 19:35:09.418767][info][8930][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[04/01 19:35:09.418771][info][8930][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[04/01 19:41:01.938179][warning][10163][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 19:41:01.938199][warning][10163][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 19:41:01.938253][warning][10163][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 19:41:01.938260][warning][10163][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 19:41:01.938263][warning][10163][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 19:41:01.938450][info][10163][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x61962BE38880
+[04/01 19:41:01.938503][warning][10163][SensorBase.cpp:377] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:41:01.938507][warning][10163][SensorBase.cpp:240] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 19:41:01.938528][warning][10163][SensorBase.cpp:377] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:41:01.938531][warning][10163][SensorBase.cpp:240] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 19:41:01.938539][info][10163][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[04/01 19:41:01.938544][info][10163][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[04/01 19:41:01.938551][info][10163][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:41:01.938555][info][10163][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[04/01 19:41:01.938557][info][10163][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:41:01.938592][info][10163][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:41:01.938595][info][10163][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Depth
+[04/01 19:41:01.938597][info][10163][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:41:01.938630][info][10163][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[04/01 19:41:01.938633][info][10163][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[04/01 19:41:01.939252][info][10230][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[04/01 19:41:01.941377][warning][10163][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 19:41:01.941388][warning][10163][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 19:41:01.941405][warning][10163][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 19:41:01.941408][warning][10163][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 19:41:01.941409][warning][10163][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 19:41:01.941557][info][10163][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x61962C10B8D0
+[04/01 19:41:01.941603][warning][10163][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:41:01.941605][warning][10163][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 19:41:01.941629][warning][10163][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:41:01.941630][warning][10163][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 19:41:01.941640][info][10163][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[04/01 19:41:01.941645][info][10163][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[04/01 19:41:01.941650][info][10163][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:41:01.941653][info][10163][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[04/01 19:41:01.941659][info][10163][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:41:01.941694][info][10163][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:41:01.941696][info][10163][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Depth
+[04/01 19:41:01.941698][info][10163][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:41:01.941730][info][10163][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[04/01 19:41:01.941732][info][10163][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[04/01 19:41:01.942296][info][10234][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[04/01 19:41:02.007883][info][10235][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Depth
+[04/01 19:41:02.273297][info][10231][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Depth
+[04/01 19:41:06.964430][info][10230][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.248756fps
+[04/01 19:41:06.964500][info][10232][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.248756fps
+[04/01 19:41:06.971081][info][10234][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.224697fps
+[04/01 19:41:06.971145][info][10236][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.224697fps
+[04/01 19:41:07.038799][info][10235][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=28.225004fps
+[04/01 19:41:07.038862][info][10239][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=28.225004fps
+[04/01 19:41:07.298414][info][10231][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.248756fps
+[04/01 19:41:07.298476][info][10240][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.248756fps
+[04/01 19:41:11.990339][info][10230][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.043772fps
+[04/01 19:41:11.990402][info][10232][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.043772fps
+[04/01 19:41:11.996979][info][10234][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:41:11.997035][info][10236][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.043772fps
+[04/01 19:41:12.064688][info][10235][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=30.043772fps
+[04/01 19:41:12.064747][info][10239][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=30.043772fps
+[04/01 19:41:12.324317][info][10231][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.043772fps
+[04/01 19:41:12.324370][info][10240][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.043772fps
+[04/01 19:41:13.296188][warning][10239][Pipeline.cpp:295] [CL8RC5301ZH] Output frameset queue is full, drop oldest frameset!
+[04/01 19:41:15.787821][warning][10163][Pipeline.cpp:305] [CL8S16100G1] Wait for frame timeout, you can try to increase the wait time! current timeout=2000
+[04/01 19:41:16.329688][warning][10311][Pipeline.cpp:295] [CL8RC5301ZH] Output frameset queue is full, drop oldest frameset! [**25 logs in 3033ms, last: 19:41:14.130553**]
+[04/01 19:41:19.788142][warning][10163][Pipeline.cpp:305] [CL8S16100G1] Wait for frame timeout, you can try to increase the wait time! current timeout=2000 [**2 logs in 4000ms**]
+[04/01 19:41:27.788452][warning][10347][Pipeline.cpp:305] [CL8S16100G1] Wait for frame timeout, you can try to increase the wait time! current timeout=2000 [**3 logs in 8000ms, last: 19:41:25.788535**]
+[04/01 19:41:39.788766][warning][10352][Pipeline.cpp:305] [CL8S16100G1] Wait for frame timeout, you can try to increase the wait time! current timeout=2000 [**6 logs in 12000ms, last: 19:41:37.789172**]
+[04/01 19:42:03.789404][warning][10359][Pipeline.cpp:305] [CL8S16100G1] Wait for frame timeout, you can try to increase the wait time! current timeout=2000 [**12 logs in 24000ms, last: 19:42:01.790341**]
+[04/01 19:42:19.791316][info][10163][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[04/01 19:42:19.791347][info][10163][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[04/01 19:42:19.791371][info][10163][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Depth
+[04/01 19:42:19.791447][info][10163][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Depth
+[04/01 19:42:19.791498][info][10163][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Depth
+[04/01 19:42:19.791504][info][10163][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[04/01 19:42:19.791565][info][10163][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[04/01 19:42:19.791593][info][10163][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[04/01 19:42:19.791597][info][10163][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[04/01 19:42:19.791610][info][10163][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[04/01 19:42:19.791617][info][10163][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[04/01 19:42:19.791619][info][10163][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[04/01 19:42:19.791623][info][10163][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Depth
+[04/01 19:42:19.791690][info][10163][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Depth
+[04/01 19:42:19.791751][info][10163][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Depth
+[04/01 19:42:19.791756][info][10163][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[04/01 19:42:19.791798][info][10163][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[04/01 19:42:19.791844][info][10163][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[04/01 19:42:19.791846][info][10163][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[04/01 19:42:19.791850][info][10163][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[04/01 19:42:19.842050][info][10163][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x61962BE38880
+[04/01 19:42:19.842088][info][10163][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 19:42:19.842092][info][10163][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 19:42:19.842532][info][10163][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x61962C10B8D0
+[04/01 19:42:19.842564][info][10163][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[04/01 19:42:19.842567][info][10163][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[04/01 19:42:19.843671][warning][11366][Pipeline.cpp:305] [CL8S16100G1] Wait for frame timeout, you can try to increase the wait time! current timeout=2000 [**9 logs in 16054ms, last: 19:42:19.791278**]
+[04/01 19:47:15.125658][warning][11864][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 19:47:15.125680][warning][11864][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 19:47:15.125728][warning][11864][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 19:47:15.125731][warning][11864][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 19:47:15.125733][warning][11864][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 19:47:15.125922][info][11864][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x5C8433799670
+[04/01 19:47:15.125991][warning][11864][SensorBase.cpp:377] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:47:15.125993][warning][11864][SensorBase.cpp:240] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 19:47:15.126016][warning][11864][SensorBase.cpp:377] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:47:15.126018][warning][11864][SensorBase.cpp:240] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 19:47:15.126024][info][11864][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[04/01 19:47:15.126028][info][11864][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[04/01 19:47:15.126034][info][11864][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:47:15.126037][info][11864][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[04/01 19:47:15.126039][info][11864][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:47:15.126081][info][11864][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:47:15.126084][info][11864][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Depth
+[04/01 19:47:15.126085][info][11864][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:47:15.126123][info][11864][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[04/01 19:47:15.126124][info][11864][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[04/01 19:47:15.126725][info][11931][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[04/01 19:47:15.192499][warning][11864][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 19:47:15.192517][warning][11864][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 19:47:15.192541][warning][11864][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 19:47:15.192544][warning][11864][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 19:47:15.192545][warning][11864][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 19:47:15.192749][info][11864][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x5C8433B00BE0
+[04/01 19:47:15.192822][warning][11864][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:47:15.192825][warning][11864][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 19:47:15.192857][warning][11864][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:47:15.192859][warning][11864][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 19:47:15.192867][info][11864][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[04/01 19:47:15.192872][info][11864][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[04/01 19:47:15.192878][info][11864][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:47:15.192881][info][11864][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[04/01 19:47:15.192882][info][11864][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:47:15.192920][info][11864][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:47:15.192922][info][11864][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Depth
+[04/01 19:47:15.192928][info][11864][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:47:15.192963][info][11864][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[04/01 19:47:15.192965][info][11864][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[04/01 19:47:15.193414][info][11936][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[04/01 19:47:15.245063][info][11937][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Depth
+[04/01 19:47:15.560626][info][11932][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Depth
+[04/01 19:47:15.560762][warning][11945][Pipeline.cpp:295] [CL8S16100G1] Output frameset queue is full, drop oldest frameset!
+[04/01 19:47:16.056045][warning][11940][Pipeline.cpp:295] [CL8RC5301ZH] Output frameset queue is full, drop oldest frameset!
+[04/01 19:47:18.560909][warning][11946][Pipeline.cpp:295] [CL8S16100G1] Output frameset queue is full, drop oldest frameset! [**5 logs in 3000ms, last: 19:47:16.026549**]
+[04/01 19:47:20.152033][info][11931][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.242737fps
+[04/01 19:47:20.152083][info][11933][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.242737fps
+[04/01 19:47:20.215322][info][11936][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.266827fps
+[04/01 19:47:20.215414][info][11938][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.266827fps
+[04/01 19:47:20.249715][info][11937][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=26.179056fps
+[04/01 19:47:20.249761][info][11940][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=26.179056fps
+[04/01 19:47:20.585818][info][11932][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.248756fps
+[04/01 19:47:20.585884][info][11945][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.248756fps
+[04/01 19:47:25.177421][info][11931][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:47:25.177482][info][11933][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.049751fps
+[04/01 19:47:25.240689][info][11936][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:47:25.240771][info][11938][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.049751fps
+[04/01 19:47:25.275085][info][11937][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=30.043772fps
+[04/01 19:47:25.275137][info][11940][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=30.043772fps
+[04/01 19:47:25.611207][info][11932][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.043772fps
+[04/01 19:47:25.611277][info][11945][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.043772fps
+[04/01 19:47:30.202255][info][11931][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:47:30.202332][info][11933][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.049751fps
+[04/01 19:47:30.265481][info][11936][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:47:30.265536][info][11938][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.049751fps
+[04/01 19:47:30.299872][info][11937][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=30.055731fps
+[04/01 19:47:30.299934][info][11940][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=30.055731fps
+[04/01 19:47:30.635995][info][11932][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.055731fps
+[04/01 19:47:30.636040][info][11945][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.049751fps
+[04/01 19:47:35.227197][info][11931][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:47:35.227262][info][11933][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.049751fps
+[04/01 19:47:35.290439][info][11936][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:47:35.290510][info][11938][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.049751fps
+[04/01 19:47:35.324841][info][11937][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=30.049751fps
+[04/01 19:47:35.324893][info][11940][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=30.049751fps
+[04/01 19:47:35.661013][info][11932][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.049751fps
+[04/01 19:47:35.661062][info][11945][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.049751fps
+[04/01 19:47:40.252892][info][11931][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:47:40.252961][info][11933][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.049751fps
+[04/01 19:47:40.316168][info][11936][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.043772fps
+[04/01 19:47:40.316221][info][11938][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.043772fps
+[04/01 19:47:40.350603][info][11937][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=30.043772fps
+[04/01 19:47:40.350644][info][11940][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=30.043772fps
+[04/01 19:47:40.686823][info][11932][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.043772fps
+[04/01 19:47:40.686931][info][11945][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.049751fps
+[04/01 19:47:45.278874][info][11931][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.043772fps
+[04/01 19:47:45.278954][info][11933][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.043772fps
+[04/01 19:47:45.342085][info][11936][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.043772fps
+[04/01 19:47:45.342158][info][11938][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.043772fps
+[04/01 19:47:45.376483][info][11937][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=30.043772fps
+[04/01 19:47:45.376519][info][11940][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=30.043772fps
+[04/01 19:47:45.712650][info][11932][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.043772fps
+[04/01 19:47:45.712720][info][11945][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.043772fps
+[04/01 19:47:50.304256][info][11931][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.043772fps
+[04/01 19:47:50.304318][info][11933][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.043772fps
+[04/01 19:47:50.367419][info][11936][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:47:50.367478][info][11938][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.049751fps
+[04/01 19:47:50.401837][info][11937][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=30.049751fps
+[04/01 19:47:50.401865][info][11940][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=30.049751fps
+[04/01 19:47:50.738047][info][11932][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.043772fps
+[04/01 19:47:50.738094][info][11945][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.043772fps
+[04/01 19:47:55.329916][info][11931][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:47:55.330034][info][11933][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.043772fps
+[04/01 19:47:55.393041][info][11936][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.043772fps
+[04/01 19:47:55.393125][info][11938][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.043772fps
+[04/01 19:47:55.427442][info][11937][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=30.043772fps
+[04/01 19:47:55.427513][info][11940][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=30.043772fps
+[04/01 19:47:55.763639][info][11932][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.049751fps
+[04/01 19:47:55.763705][info][11945][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.049751fps
+[04/01 19:48:00.355237][info][11931][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.043772fps
+[04/01 19:48:00.355301][info][11933][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.049751fps
+[04/01 19:48:00.418368][info][11936][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:48:00.418420][info][11938][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.049751fps
+[04/01 19:48:00.452786][info][11937][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=30.049751fps
+[04/01 19:48:00.452891][info][11940][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=30.049751fps
+[04/01 19:48:00.788991][info][11932][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.049751fps
+[04/01 19:48:00.789031][info][11945][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.043772fps
+[04/01 19:48:05.380114][info][11931][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:48:05.380158][info][11933][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.049751fps
+[04/01 19:48:05.443224][info][11936][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:48:05.443278][info][11938][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.049751fps
+[04/01 19:48:05.477626][info][11937][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=30.049751fps
+[04/01 19:48:05.477687][info][11940][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=30.049751fps
+[04/01 19:48:05.813847][info][11932][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.049751fps
+[04/01 19:48:05.813918][info][11945][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.055731fps
+[04/01 19:48:06.575871][warning][11940][Pipeline.cpp:295] [CL8RC5301ZH] Output frameset queue is full, drop oldest frameset!
+[04/01 19:48:06.811165][info][11864][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[04/01 19:48:06.811188][info][11864][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[04/01 19:48:06.811209][info][11864][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Depth
+[04/01 19:48:06.811268][info][11864][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Depth
+[04/01 19:48:06.811324][info][11864][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Depth
+[04/01 19:48:06.811330][info][11864][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[04/01 19:48:06.811372][info][11864][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[04/01 19:48:06.811408][info][11864][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[04/01 19:48:06.811412][info][11864][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[04/01 19:48:06.811420][info][11864][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[04/01 19:48:06.811428][info][11864][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[04/01 19:48:06.811429][info][11864][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[04/01 19:48:06.811433][info][11864][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Depth
+[04/01 19:48:06.811494][info][11864][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Depth
+[04/01 19:48:06.811526][info][11864][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Depth
+[04/01 19:48:06.811536][info][11864][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[04/01 19:48:06.811577][info][11864][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[04/01 19:48:06.811608][info][11864][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[04/01 19:48:06.811611][info][11864][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[04/01 19:48:06.811613][info][11864][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[04/01 19:48:06.814832][info][11864][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x5C8433799670
+[04/01 19:48:06.814857][info][11864][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 19:48:06.814860][info][11864][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 19:48:06.815110][info][11864][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x5C8433B00BE0
+[04/01 19:48:06.815122][info][11864][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[04/01 19:48:06.815124][info][11864][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[04/01 19:48:06.816444][warning][12020][Pipeline.cpp:295] [CL8RC5301ZH] Output frameset queue is full, drop oldest frameset! [**7 logs in 240ms, last: 19:48:06.808803**]
+[04/01 19:48:12.880212][warning][12067][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 19:48:12.880234][warning][12067][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 19:48:12.880285][warning][12067][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 19:48:12.880288][warning][12067][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 19:48:12.880290][warning][12067][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 19:48:12.880455][info][12067][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x57A7B5440250
+[04/01 19:48:12.880494][warning][12067][SensorBase.cpp:377] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:48:12.880496][warning][12067][SensorBase.cpp:240] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 19:48:12.880516][warning][12067][SensorBase.cpp:377] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:48:12.880517][warning][12067][SensorBase.cpp:240] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 19:48:12.880526][info][12067][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[04/01 19:48:12.880531][info][12067][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[04/01 19:48:12.880537][info][12067][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:48:12.880540][info][12067][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[04/01 19:48:12.880542][info][12067][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:48:12.880577][info][12067][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:48:12.880580][info][12067][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Depth
+[04/01 19:48:12.880582][info][12067][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:48:12.881100][info][12067][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[04/01 19:48:12.881112][info][12067][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[04/01 19:48:12.881411][info][12134][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[04/01 19:48:12.887104][warning][12067][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 19:48:12.887113][warning][12067][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 19:48:12.887126][warning][12067][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 19:48:12.887129][warning][12067][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 19:48:12.887130][warning][12067][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 19:48:12.887264][info][12067][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x57A7B5711E20
+[04/01 19:48:12.887299][warning][12067][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:48:12.887303][warning][12067][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 19:48:12.887326][warning][12067][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:48:12.887328][warning][12067][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 19:48:12.887338][info][12067][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[04/01 19:48:12.887343][info][12067][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[04/01 19:48:12.887348][info][12067][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:48:12.887350][info][12067][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[04/01 19:48:12.887352][info][12067][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:48:12.887384][info][12067][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:48:12.887388][info][12067][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Depth
+[04/01 19:48:12.887390][info][12067][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:48:12.887409][info][12067][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[04/01 19:48:12.887411][info][12067][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[04/01 19:48:12.888413][info][12138][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[04/01 19:48:12.939697][info][12139][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Depth
+[04/01 19:48:13.315241][info][12135][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Depth
+[04/01 19:48:13.315392][warning][12149][Pipeline.cpp:295] [CL8S16100G1] Output frameset queue is full, drop oldest frameset!
+[04/01 19:48:13.750642][warning][12143][Pipeline.cpp:295] [CL8RC5301ZH] Output frameset queue is full, drop oldest frameset!
+[04/01 19:48:16.315541][warning][12150][Pipeline.cpp:295] [CL8S16100G1] Output frameset queue is full, drop oldest frameset! [**4 logs in 3000ms, last: 19:48:13.747876**]
+[04/01 19:48:17.906626][info][12134][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.248756fps
+[04/01 19:48:17.906696][info][12136][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.248756fps
+[04/01 19:48:17.909861][info][12138][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.272854fps
+[04/01 19:48:17.909900][info][12140][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.272854fps
+[04/01 19:48:17.944317][info][12139][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=26.173826fps
+[04/01 19:48:17.944408][info][12143][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=26.173826fps
+[04/01 19:48:18.340389][info][12135][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.248756fps
+[04/01 19:48:18.340450][info][12149][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.248756fps
+[04/01 19:48:22.932027][info][12134][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.043772fps
+[04/01 19:48:22.932114][info][12136][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.043772fps
+[04/01 19:48:22.935254][info][12138][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.043772fps
+[04/01 19:48:22.935297][info][12140][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.043772fps
+[04/01 19:48:22.969669][info][12139][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=30.049751fps
+[04/01 19:48:22.969707][info][12143][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=30.049751fps
+[04/01 19:48:23.365770][info][12135][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.049751fps
+[04/01 19:48:23.365828][info][12149][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.049751fps
+[04/01 19:48:27.956844][info][12134][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.055731fps
+[04/01 19:48:27.956922][info][12136][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.055731fps
+[04/01 19:48:27.960091][info][12138][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.049751fps
+[04/01 19:48:27.960133][info][12140][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.049751fps
+[04/01 19:48:27.994482][info][12139][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=30.049751fps
+[04/01 19:48:27.994537][info][12143][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=30.049751fps
+[04/01 19:48:28.390604][info][12135][VideoSensor.cpp:153] [CL8S16100G1] Depth backend frame callback, frameRate=30.049751fps
+[04/01 19:48:28.390698][info][12149][SensorBase.cpp:370] [CL8S16100G1] Depth Streaming... frameRate=30.049751fps
+[04/01 19:48:30.501696][info][12067][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[04/01 19:48:30.501712][info][12067][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[04/01 19:48:30.501726][info][12067][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Depth
+[04/01 19:48:30.501755][info][12067][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Depth
+[04/01 19:48:30.501784][info][12067][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Depth
+[04/01 19:48:30.501787][info][12067][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[04/01 19:48:30.501819][info][12067][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[04/01 19:48:30.501858][info][12067][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[04/01 19:48:30.501869][info][12067][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[04/01 19:48:30.501874][info][12067][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[04/01 19:48:30.501880][info][12067][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[04/01 19:48:30.501881][info][12067][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[04/01 19:48:30.501884][info][12067][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Depth
+[04/01 19:48:30.501952][info][12067][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Depth
+[04/01 19:48:30.502022][info][12067][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Depth
+[04/01 19:48:30.502030][info][12067][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[04/01 19:48:30.502074][info][12067][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[04/01 19:48:30.502111][info][12067][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[04/01 19:48:30.502114][info][12067][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[04/01 19:48:30.502118][info][12067][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[04/01 19:48:30.508492][info][12067][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x57A7B5440250
+[04/01 19:48:30.508517][info][12067][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 19:48:30.508521][info][12067][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 19:48:30.508888][info][12067][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x57A7B5711E20
+[04/01 19:48:30.508909][info][12067][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[04/01 19:48:30.508911][info][12067][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[04/01 19:59:00.616629][warning][15676][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 19:59:00.616662][warning][15676][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 19:59:00.616753][warning][15676][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 19:59:00.616759][warning][15676][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 19:59:00.616761][warning][15676][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 19:59:00.616950][info][15676][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x70EB141010F0
+[04/01 19:59:00.617055][warning][15676][SensorBase.cpp:377] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:59:00.617059][warning][15676][SensorBase.cpp:240] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 19:59:00.617079][warning][15676][SensorBase.cpp:377] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:59:00.617082][warning][15676][SensorBase.cpp:240] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 19:59:00.617089][info][15676][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[04/01 19:59:00.617094][info][15676][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[04/01 19:59:00.617101][info][15676][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:59:00.617104][info][15676][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[04/01 19:59:00.617107][info][15676][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:59:00.617143][info][15676][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:59:00.617147][info][15676][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Depth
+[04/01 19:59:00.617149][info][15676][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:59:00.617166][info][15676][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[04/01 19:59:00.617168][info][15676][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[04/01 19:59:00.617531][info][15893][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[04/01 19:59:00.951595][info][15894][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Depth
+[04/01 19:59:01.729140][info][15676][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[04/01 19:59:01.729162][info][15676][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[04/01 19:59:01.729182][info][15676][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Depth
+[04/01 19:59:01.729233][info][15676][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Depth
+[04/01 19:59:01.729253][info][15676][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Depth
+[04/01 19:59:01.729257][info][15676][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[04/01 19:59:01.729294][info][15676][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[04/01 19:59:01.729315][info][15676][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[04/01 19:59:01.729317][info][15676][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[04/01 19:59:01.729321][info][15676][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[04/01 19:59:01.729354][info][15676][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x70EB141010F0
+[04/01 19:59:01.729833][info][15676][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 19:59:01.729840][info][15676][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 19:59:01.735803][warning][15676][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 19:59:01.735816][warning][15676][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 19:59:01.735880][warning][15676][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 19:59:01.735884][warning][15676][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 19:59:01.735885][warning][15676][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 19:59:01.736032][info][15676][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x5ED2C25CF300
+[04/01 19:59:01.736135][warning][15676][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:59:01.736141][warning][15676][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 19:59:01.736157][warning][15676][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 19:59:01.736158][warning][15676][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 19:59:01.736164][info][15676][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[04/01 19:59:01.736169][info][15676][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[04/01 19:59:01.736175][info][15676][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:59:01.736177][info][15676][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[04/01 19:59:01.736179][info][15676][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 19:59:01.736207][info][15676][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:59:01.736210][info][15676][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Depth
+[04/01 19:59:01.736212][info][15676][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 19:59:01.736232][info][15676][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[04/01 19:59:01.736233][info][15676][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[04/01 19:59:01.736714][info][15905][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[04/01 19:59:01.802278][info][15906][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Depth
+[04/01 19:59:02.819265][info][15676][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[04/01 19:59:02.819302][info][15676][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[04/01 19:59:02.819324][info][15676][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Depth
+[04/01 19:59:02.819381][info][15676][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Depth
+[04/01 19:59:02.819414][info][15676][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Depth
+[04/01 19:59:02.819418][info][15676][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[04/01 19:59:02.819466][info][15676][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[04/01 19:59:02.819508][info][15676][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[04/01 19:59:02.819527][info][15676][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[04/01 19:59:02.819536][info][15676][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[04/01 19:59:02.819574][info][15676][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x5ED2C25CF300
+[04/01 19:59:02.819628][info][15676][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[04/01 19:59:02.819632][info][15676][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[04/01 20:01:21.983536][warning][16519][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 20:01:21.983557][warning][16519][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 20:01:21.983637][warning][16519][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 20:01:21.983640][warning][16519][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 20:01:21.983642][warning][16519][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 20:01:21.983807][info][16519][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x774844081680
+[04/01 20:01:21.983912][warning][16519][SensorBase.cpp:377] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 20:01:21.983915][warning][16519][SensorBase.cpp:240] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 20:01:21.983934][warning][16519][SensorBase.cpp:377] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 20:01:21.983935][warning][16519][SensorBase.cpp:240] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 20:01:21.983942][info][16519][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[04/01 20:01:21.983947][info][16519][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[04/01 20:01:21.983954][info][16519][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 20:01:21.983956][info][16519][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[04/01 20:01:21.983958][info][16519][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 20:01:21.983996][info][16519][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 20:01:21.983999][info][16519][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Depth
+[04/01 20:01:21.984001][info][16519][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 20:01:21.984016][info][16519][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[04/01 20:01:21.984018][info][16519][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[04/01 20:01:21.984315][info][17097][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[04/01 20:01:22.318370][info][17098][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Depth
+[04/01 20:01:27.009520][info][17097][VideoSensor.cpp:153] [CL8S16100G1] Color backend frame callback, frameRate=30.248756fps
+[04/01 20:01:27.009608][info][17099][SensorBase.cpp:370] [CL8S16100G1] Color Streaming... frameRate=30.248756fps
+[04/01 20:01:27.091761][info][16519][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[04/01 20:01:27.091783][info][16519][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[04/01 20:01:27.091803][info][16519][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Depth
+[04/01 20:01:27.091849][info][16519][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Depth
+[04/01 20:01:27.091887][info][16519][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Depth
+[04/01 20:01:27.091898][info][16519][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[04/01 20:01:27.091941][info][16519][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[04/01 20:01:27.091969][info][16519][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[04/01 20:01:27.091971][info][16519][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[04/01 20:01:27.091975][info][16519][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[04/01 20:01:27.092005][info][16519][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x774844081680
+[04/01 20:01:27.092465][info][16519][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 20:01:27.092470][info][16519][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 20:01:27.098384][warning][16519][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 20:01:27.098396][warning][16519][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 20:01:27.098463][warning][16519][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 20:01:27.098467][warning][16519][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 20:01:27.098468][warning][16519][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 20:01:27.098607][info][16519][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x774838001820
+[04/01 20:01:27.098695][warning][16519][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 20:01:27.098697][warning][16519][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 20:01:27.098715][warning][16519][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 20:01:27.098717][warning][16519][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 20:01:27.098723][info][16519][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[04/01 20:01:27.098727][info][16519][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[04/01 20:01:27.098733][info][16519][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 20:01:27.098736][info][16519][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[04/01 20:01:27.098738][info][16519][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 20:01:27.098764][info][16519][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 20:01:27.098767][info][16519][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Depth
+[04/01 20:01:27.098768][info][16519][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 20:01:27.098796][info][16519][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[04/01 20:01:27.098798][info][16519][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[04/01 20:01:27.099317][info][17132][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[04/01 20:01:27.164863][info][17133][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Depth
+[04/01 20:01:32.029396][info][17133][VideoSensor.cpp:153] [CL8RC5301ZH] Depth backend frame callback, frameRate=27.689243fps
+[04/01 20:01:32.029442][info][17136][SensorBase.cpp:370] [CL8RC5301ZH] Depth Streaming... frameRate=27.689243fps
+[04/01 20:01:32.128128][info][17132][VideoSensor.cpp:153] [CL8RC5301ZH] Color backend frame callback, frameRate=30.224697fps
+[04/01 20:01:32.128218][info][17134][SensorBase.cpp:370] [CL8RC5301ZH] Color Streaming... frameRate=30.224697fps
+[04/01 20:01:32.174270][info][16519][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[04/01 20:01:32.174294][info][16519][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[04/01 20:01:32.174314][info][16519][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Depth
+[04/01 20:01:32.174359][info][16519][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Depth
+[04/01 20:01:32.174410][info][16519][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Depth
+[04/01 20:01:32.174413][info][16519][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[04/01 20:01:32.174454][info][16519][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[04/01 20:01:32.174490][info][16519][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[04/01 20:01:32.174491][info][16519][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[04/01 20:01:32.174495][info][16519][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[04/01 20:01:32.174521][info][16519][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x774838001820
+[04/01 20:01:32.174564][info][16519][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[04/01 20:01:32.174567][info][16519][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[04/01 20:11:26.716241][warning][18090][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 20:11:26.716263][warning][18090][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 20:11:26.716343][warning][18090][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 20:11:26.716348][warning][18090][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 20:11:26.716349][warning][18090][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 20:11:26.716511][info][18090][Pipeline.cpp:42] [CL8S16100G1] Pipeline created with device: {name: Femto Bolt, sn: CL8S16100G1}, @0x6536E61AAE60
+[04/01 20:11:26.716603][warning][18090][SensorBase.cpp:377] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 20:11:26.716606][warning][18090][SensorBase.cpp:240] [CL8S16100G1] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 20:11:26.716624][warning][18090][SensorBase.cpp:377] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 20:11:26.716626][warning][18090][SensorBase.cpp:240] [CL8S16100G1] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 20:11:26.716632][info][18090][Pipeline.cpp:216] [CL8S16100G1] Check and set config done!
+[04/01 20:11:26.716637][info][18090][Pipeline.cpp:254] [CL8S16100G1] Try to start streams!
+[04/01 20:11:26.716644][info][18090][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 20:11:26.716652][info][18090][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Color
+[04/01 20:11:26.716654][info][18090][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 20:11:26.716682][info][18090][VideoSensor.cpp:58] [CL8S16100G1] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 20:11:26.716685][info][18090][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STARTING@Depth
+[04/01 20:11:26.716687][info][18090][VideoSensor.cpp:127] [CL8S16100G1] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 20:11:26.716711][info][18090][Pipeline.cpp:270] [CL8S16100G1] Start streams done!
+[04/01 20:11:26.716713][info][18090][Pipeline.cpp:238] [CL8S16100G1] Pipeline start done!
+[04/01 20:11:26.716923][info][18298][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Color
+[04/01 20:11:27.051000][info][18299][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STREAMING@Depth
+[04/01 20:11:27.831605][info][18090][Pipeline.cpp:336] [CL8S16100G1] Try to stop pipeline!
+[04/01 20:11:27.831637][info][18090][Pipeline.cpp:312] [CL8S16100G1] Try to stop streams!
+[04/01 20:11:27.831658][info][18090][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Depth
+[04/01 20:11:27.831696][info][18090][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Depth
+[04/01 20:11:27.831735][info][18090][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Depth
+[04/01 20:11:27.831740][info][18090][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPING@Color
+[04/01 20:11:27.831799][info][18090][SensorBase.cpp:213] [CL8S16100G1] Stream state changed to STOPPED@Color
+[04/01 20:11:27.831815][info][18090][Pipeline.cpp:326] [CL8S16100G1] Sensor stream stopped, sensorType=Color
+[04/01 20:11:27.831817][info][18090][Pipeline.cpp:332] [CL8S16100G1] Stop streams done!
+[04/01 20:11:27.831820][info][18090][Pipeline.cpp:356] [CL8S16100G1] Stop pipeline done!
+[04/01 20:11:27.831852][info][18090][Pipeline.cpp:53] [CL8S16100G1] Pipeline destroyed! @0x6536E61AAE60
+[04/01 20:11:27.832424][info][18090][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 20:11:27.832428][info][18090][SensorBase.cpp:47] [CL8S16100G1] SensorBase is destroyed
+[04/01 20:11:27.838774][warning][18090][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 4049
+[04/01 20:11:27.838791][warning][18090][ObException.cpp:8] Disparity parameter for the input stream profile is not found.
+[04/01 20:11:27.838860][warning][18090][PlaybackDeviceParamManager.cpp:23] Playback Device get disparity param failed: Disparity parameter for the input stream profile is not found.
+[04/01 20:11:27.838863][warning][18090][PlaybackDevicePort.cpp:376] Failed to get recorded struct data for property id: 1043
+[04/01 20:11:27.838864][warning][18090][PlaybackDepthWorkModeManager.cpp:28] Playback Device: Invalid depth work mode data size, expected: 52, actual: 0
+[04/01 20:11:27.838994][info][18090][Pipeline.cpp:42] [CL8RC5301ZH] Pipeline created with device: {name: Femto Bolt, sn: CL8RC5301ZH}, @0x6536E61A5560
+[04/01 20:11:27.839075][warning][18090][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 20:11:27.839077][warning][18090][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Color: the current device is a playback device and does not support stream recovery
+[04/01 20:11:27.839094][warning][18090][SensorBase.cpp:377] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support timestamp anomaly detection
+[04/01 20:11:27.839095][warning][18090][SensorBase.cpp:240] [CL8RC5301ZH] Sensor Depth: the current device is a playback device and does not support stream recovery
+[04/01 20:11:27.839101][info][18090][Pipeline.cpp:216] [CL8RC5301ZH] Check and set config done!
+[04/01 20:11:27.839114][info][18090][Pipeline.cpp:254] [CL8RC5301ZH] Try to start streams!
+[04/01 20:11:27.839120][info][18090][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 20:11:27.839122][info][18090][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Color
+[04/01 20:11:27.839124][info][18090][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Color, format: MJPG, width: 1920, height: 1080, fps: 30}
+[04/01 20:11:27.839152][info][18090][VideoSensor.cpp:58] [CL8RC5301ZH] Try to start stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 20:11:27.839154][info][18090][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STARTING@Depth
+[04/01 20:11:27.839156][info][18090][VideoSensor.cpp:127] [CL8RC5301ZH] Start backend stream: {type: Depth, format: Y16, width: 512, height: 512, fps: 30}
+[04/01 20:11:27.839181][info][18090][Pipeline.cpp:270] [CL8RC5301ZH] Start streams done!
+[04/01 20:11:27.839182][info][18090][Pipeline.cpp:238] [CL8RC5301ZH] Pipeline start done!
+[04/01 20:11:27.839660][info][18316][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Color
+[04/01 20:11:27.905227][info][18317][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STREAMING@Depth
+[04/01 20:11:28.921581][info][18090][Pipeline.cpp:336] [CL8RC5301ZH] Try to stop pipeline!
+[04/01 20:11:28.921605][info][18090][Pipeline.cpp:312] [CL8RC5301ZH] Try to stop streams!
+[04/01 20:11:28.921622][info][18090][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Depth
+[04/01 20:11:28.921656][info][18090][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Depth
+[04/01 20:11:28.921694][info][18090][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Depth
+[04/01 20:11:28.921698][info][18090][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPING@Color
+[04/01 20:11:28.921727][info][18090][SensorBase.cpp:213] [CL8RC5301ZH] Stream state changed to STOPPED@Color
+[04/01 20:11:28.921761][info][18090][Pipeline.cpp:326] [CL8RC5301ZH] Sensor stream stopped, sensorType=Color
+[04/01 20:11:28.921763][info][18090][Pipeline.cpp:332] [CL8RC5301ZH] Stop streams done!
+[04/01 20:11:28.921766][info][18090][Pipeline.cpp:356] [CL8RC5301ZH] Stop pipeline done!
+[04/01 20:11:28.921794][info][18090][Pipeline.cpp:53] [CL8RC5301ZH] Pipeline destroyed! @0x6536E61A5560
+[04/01 20:11:28.921831][info][18090][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed
+[04/01 20:11:28.921839][info][18090][SensorBase.cpp:47] [CL8RC5301ZH] SensorBase is destroyed

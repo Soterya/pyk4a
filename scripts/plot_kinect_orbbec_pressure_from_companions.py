@@ -23,6 +23,7 @@ class PlotCompanionRow:
 class PressureCompanionRow:
     frame_idx: int
     save_timestamp_ns: int
+    pressure_data_path: str
 
 
 def parse_args():
@@ -43,7 +44,16 @@ def parse_args():
         "--pressure-plots-dir",
         type=Path,
         default=None,
-        help="Directory containing pressure_maps_<frame_idx>_<timestamp_ns>.png. Defaults to companion's parent.",
+        help="Deprecated alias for --pressure-data-dir.",
+    )
+    parser.add_argument(
+        "--pressure-data-dir",
+        type=Path,
+        default=None,
+        help=(
+            "Base directory for pressure_data_path entries from companion CSV. "
+            "Defaults to companion CSV parent."
+        ),
     )
     parser.add_argument(
         "--max-delta-ms",
@@ -109,13 +119,16 @@ def read_pressure_companion_csv(path: Path, keep_nonpositive_ts: bool):
     with path.open("r", newline="", encoding="utf-8") as fh:
         reader = csv.DictReader(fh)
         for row in reader:
-            ts = int(row["save_timestamps_ns"])
+            ts_key = "save_timestamp_ns" if "save_timestamp_ns" in row else "save_timestamps_ns"
+            ts = int(row[ts_key])
             if not keep_nonpositive_ts and ts <= 0:
                 continue
+            pressure_data_path = row.get("pressure_data_path", "")
             rows.append(
                 PressureCompanionRow(
                     frame_idx=int(row["frame_idx"]),
                     save_timestamp_ns=ts,
+                    pressure_data_path=pressure_data_path,
                 )
             )
     rows.sort(key=lambda r: r.save_timestamp_ns)
@@ -217,8 +230,63 @@ def resolve_pressure_companion(session_dir: Path, override: Path | None):
     return candidates[-1].resolve()
 
 
-def pressure_plot_filename(row: PressureCompanionRow):
-    return f"pressure_maps_{row.frame_idx}_{row.save_timestamp_ns}.png"
+NODE_ROWS = 8
+NODE_COLS = 4
+NODE_H = 6
+NODE_W = 6
+SENSORS_PER_NODE = NODE_H * NODE_W
+NODES_TOTAL = NODE_ROWS * NODE_COLS
+TOTAL_VALUES = NODES_TOTAL * SENSORS_PER_NODE
+
+
+def build_pressure_grid(values: np.ndarray) -> np.ndarray:
+    grid = np.zeros((NODE_ROWS * NODE_H, NODE_COLS * NODE_W), dtype=np.float32)
+    for node_idx in range(NODES_TOTAL):
+        start = node_idx * SENSORS_PER_NODE
+        node_vals = values[start : start + SENSORS_PER_NODE].reshape(NODE_H, NODE_W)
+        node_r = node_idx // NODE_COLS
+        node_c = node_idx % NODE_COLS
+        r0 = node_r * NODE_H
+        c0 = node_c * NODE_W
+        grid[r0 : r0 + NODE_H, c0 : c0 + NODE_W] = node_vals
+    return grid
+
+
+def load_pressure_grid(npz_path: Path) -> np.ndarray | None:
+    if not npz_path.exists():
+        return None
+    try:
+        with np.load(npz_path) as data:
+            if "grid" in data:
+                return data["grid"].astype(np.float32)
+            if "values" in data:
+                values = data["values"].astype(np.float32).reshape(-1)
+                if values.size >= TOTAL_VALUES:
+                    return build_pressure_grid(values[:TOTAL_VALUES])
+                return None
+    except Exception:
+        return None
+    return None
+
+
+def colorize_pressure_grid(grid: np.ndarray, cell_size: int = 16) -> np.ndarray:
+    max_value = float(np.max(grid))
+    max_value = max(max_value, 1.0)
+    img8 = np.clip((grid / max_value) * 255.0, 0, 255).astype(np.uint8)
+    frame = cv2.applyColorMap(img8, cv2.COLORMAP_JET)
+    frame = cv2.resize(
+        frame,
+        (grid.shape[1] * cell_size, grid.shape[0] * cell_size),
+        interpolation=cv2.INTER_NEAREST,
+    )
+
+    for r in range(1, NODE_ROWS):
+        y = r * NODE_H * cell_size
+        cv2.line(frame, (0, y), (frame.shape[1], y), (255, 255, 255), 2)
+    for c in range(1, NODE_COLS):
+        x = c * NODE_W * cell_size
+        cv2.line(frame, (x, 0), (x, frame.shape[0]), (255, 255, 255), 2)
+    return frame
 
 
 def main():
@@ -248,7 +316,11 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     mapping_csv_path = output_dir / "pressure_ref_kinect_orbbec_nn_mapping.csv"
 
-    pressure_plots_dir = args.pressure_plots_dir.resolve() if args.pressure_plots_dir else pressure_csv.parent
+    pressure_data_root = (
+        args.pressure_data_dir.resolve()
+        if args.pressure_data_dir
+        else args.pressure_plots_dir.resolve() if args.pressure_plots_dir else pressure_csv.parent
+    )
     kinect_ts = [r.save_timestamp_ns for r in kinect_rows]
     orbbec_ts = [r.save_timestamp_ns for r in orbbec_rows]
     max_delta_ns = int(args.max_delta_ms * 1_000_000.0) if args.max_delta_ms is not None else None
@@ -266,7 +338,7 @@ def main():
                 "orbbec_frame_idx_master",
                 "delta_pressure_to_kinect_ms",
                 "delta_pressure_to_orbbec_ms",
-                "pressure_plot_filename",
+                "pressure_data_path",
                 "kinect_plot_filename",
                 "orbbec_plot_filename",
                 "combined_plot_filename",
@@ -288,16 +360,16 @@ def main():
 
             k_row = kinect_rows[k_idx]
             o_row = orbbec_rows[o_idx]
-            p_plot_name = pressure_plot_filename(p_row)
             k_img_path = kinect_csv.parent / k_row.plot_filename
             o_img_path = orbbec_csv.parent / o_row.plot_filename
-            p_img_path = pressure_plots_dir / p_plot_name
-            if not k_img_path.exists() or not o_img_path.exists() or not p_img_path.exists():
+            p_npz_path = pressure_data_root / p_row.pressure_data_path
+            if not k_img_path.exists() or not o_img_path.exists() or not p_npz_path.exists():
                 continue
 
             k_img = cv2.imread(str(k_img_path), cv2.IMREAD_COLOR)
             o_img = cv2.imread(str(o_img_path), cv2.IMREAD_COLOR)
-            p_img = cv2.imread(str(p_img_path), cv2.IMREAD_COLOR)
+            p_grid = load_pressure_grid(p_npz_path)
+            p_img = colorize_pressure_grid(p_grid) if p_grid is not None else None
             if k_img is None or o_img is None or p_img is None:
                 continue
 
@@ -322,7 +394,7 @@ def main():
                     o_row.frame_idx,
                     f"{delta_k_ms:.6f}",
                     f"{delta_o_ms:.6f}",
-                    p_plot_name,
+                    p_row.pressure_data_path,
                     k_row.plot_filename,
                     o_row.plot_filename,
                     out_name,

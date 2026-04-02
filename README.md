@@ -98,8 +98,11 @@ Use your target person/session in place of `person_1/session_1`.
 1. Export Kinect synced data.
 2. Export Orbbec synced data.
 3. Export Pressure synced data.
-4. Build Kinect-Orbbec timestamp mapping (and optional plots).
-5. Build Pressure-Kinect-Orbbec timestamp mapping (and optional plots).
+4. Export fused depth maps from Orbbec synced depth.
+5. Build Kinect-Orbbec timestamp mapping (and optional plots).
+6. Build Pressure-Kinect-Orbbec timestamp mapping (and optional plots).
+7. Trim synced CSVs to overlap window.
+8. Plot from trimmed CSVs.
 
 ### Commands
 1. Kinect export:
@@ -120,19 +123,51 @@ python scripts/export_orbbec_synced_by_device_ts_data.py data/person_1/session_1
 python scripts/export_pressure_synced_by_device_ts_data.py data/person_1/session_1/data_collection
 ```
 
-4. Kinect-Orbbec mapping (CSV only):
+4. Fused depth export:
+
+```bash
+python scripts/export_fused_depth_maps.py \
+  --calib_json outputs/person_1/session_1/depth_calibration/depth_calibration.json \
+  --sync_csv outputs/person_1/session_1/orbbec/orbbec_synced_data_companion.csv \
+  --cam1_depth_dir outputs/person_1/session_1/orbbec/orbbec_depth_master \
+  --cam2_depth_dir outputs/person_1/session_1/orbbec/orbbec_depth_subordinate \
+  --max_frames 0 \
+  --save_npy
+```
+
+5. Kinect-Orbbec mapping (CSV only):
 
 ```bash
 python scripts/plot_kinect_orbbec_from_exported_data.py outputs/person_1/session_1
 ```
 
-5. Pressure-Kinect-Orbbec mapping (CSV only):
+6. Pressure-Kinect-Orbbec mapping (CSV only):
 
 ```bash
 python scripts/plot_kinect_orbbec_pressure_from_exported_data.py outputs/person_1/session_1
 ```
 
-If you also want plot images, add `--plot` to steps 4 and 5.
+If you also want plot images for steps 5 and 6, add `--plot`.
+
+7. Trim both synced CSVs to their valid overlap windows:
+
+```bash
+python scripts/trim_synced_overlap_csvs.py \
+  --pressure-rgb-depth-csv outputs/person_1/session_1/synced_data_from_pressure_kinect_orbbec/synced_data_from_pressure_kinect_orbbec.csv \
+  --rgb-depth-csv outputs/person_1/session_1/synced_data_from_kinect_orbbec/synced_data_from_kinect_orbbec.csv
+```
+
+8. Plot from trimmed CSVs:
+
+```bash
+python scripts/plot_kinect_orbbec_from_trimmed_csv.py \
+  --trimmed-csv outputs/person_1/session_1/person_1_session_1_rgb_depth.csv
+```
+
+```bash
+python scripts/plot_kinect_orbbec_pressure_from_trimmed_csv.py \
+  --trimmed-csv outputs/person_1/session_1/person_1_session_1_pressure_rgb_depth.csv
+```
 
 ### Output layout
 Exports and synced outputs are saved under:
@@ -145,5 +180,10 @@ Main subfolders:
 - `kinect/`
 - `orbbec/`
 - `pressure/`
+- `fused_depth_maps/`
 - `synced_data_from_kinect_orbbec/`
 - `synced_data_from_pressure_kinect_orbbec/`
+
+Trimmed CSVs are written to:
+- `outputs/person_x/session_x/person_x_session_x_rgb_depth.csv`
+- `outputs/person_x/session_x/person_x_session_x_pressure_rgb_depth.csv`

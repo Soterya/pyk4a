@@ -38,9 +38,9 @@ argparse.add_argument(
     type=str,
     default=None,
     help=(
-        "Session folder name under ./data (for example: session_20260327_191531) "
-        "or an explicit path to a session directory. If provided, Kinect/Orbbec "
-        "playback files are auto-discovered from <session>/rgb_depth_data."
+        "Path under ./data (for example: person_x/session_x/depth_calibration) "
+        "or an explicit path to a depth_calibration/session directory. If provided, "
+        "Kinect/Orbbec playback files are auto-discovered from <input>/rgb_depth_data."
     ),
 )
 argparse.add_argument("--k4a_playback_path", required=False, default=None, help="Path to Kinect recording (.mkv) for camera 0.")
@@ -82,14 +82,14 @@ def _resolve_inputs_from_session_folder(session_folder: str) -> tuple[Path, list
 
     if session_dir.name == "rgb_depth_data":
         rgb_depth_dir = session_dir
-        session_root_dir = session_dir.parent
+        depth_calibration_dir = session_dir.parent
     else:
         rgb_depth_dir = session_dir / "rgb_depth_data"
         if not rgb_depth_dir.exists():
             raise FileNotFoundError(
                 f"[ERROR] Could not find rgb_depth_data under session folder: {session_dir}"
             )
-        session_root_dir = session_dir
+        depth_calibration_dir = session_dir
 
     kinect_candidates = sorted(rgb_depth_dir.glob("kinect*.mkv"))
     if not kinect_candidates:
@@ -113,20 +113,28 @@ def _resolve_inputs_from_session_folder(session_folder: str) -> tuple[Path, list
             f"[ERROR] No Orbbec .bag files found in: {rgb_depth_dir}"
         )
 
-    return kinect_master, orbbec_candidates, session_root_dir
+    return kinect_master, orbbec_candidates, depth_calibration_dir
 
 
 def _resolve_cli_paths():
     if args.session_folder:
-        kinect_master, orbbec_bags, session_root_dir = _resolve_inputs_from_session_folder(args.session_folder)
+        repo_root = Path(__file__).resolve().parent.parent
+        data_root = (repo_root / "data").resolve()
+
+        kinect_master, orbbec_bags, depth_calibration_dir = _resolve_inputs_from_session_folder(args.session_folder)
         args.k4a_playback_path = str(kinect_master)
         args.orbbec_playback_paths = [str(p) for p in orbbec_bags]
 
         # Keep user-provided paths untouched; only override legacy defaults.
         if args.debug_calib_dir == "./data/trial19/debug_calib":
-            args.debug_calib_dir = str((session_root_dir / "debug_calib").resolve())
+            args.debug_calib_dir = str((depth_calibration_dir / "debug_calib").resolve())
         if args.out_dir == "./data/trial19/outputs":
-            args.out_dir = str((Path(__file__).resolve().parent.parent / "outputs" / session_root_dir.name / "calib_hybrid").resolve())
+            try:
+                rel_from_data = depth_calibration_dir.resolve().relative_to(data_root)
+                args.out_dir = str((repo_root / "outputs" / rel_from_data).resolve())
+            except ValueError:
+                # Fallback for paths outside the repository's ./data tree.
+                args.out_dir = str((repo_root / "outputs" / depth_calibration_dir.name).resolve())
     else:
         if not args.k4a_playback_path or not args.orbbec_playback_paths:
             raise ValueError(
@@ -984,7 +992,7 @@ def main():
     for ii in range(1, cam_count):
         save_data[f"T_depthcam_0_from_depthcam_{ii}"] = T_depthcam_0_from_depthcam_ii_list[ii].tolist()
 
-    out_json = out_dir / "refined_extrinsics.json"
+    out_json = out_dir / "depth_calibration.json"
     out_json.write_text(json.dumps(save_data, indent=4))
     print(f"[INFO] Final refined extrinsics and metadata saved to {out_json}")
 
