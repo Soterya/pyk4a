@@ -1,5 +1,5 @@
 """
-Kinect capture worker. Launched by capture.py with RECORD_MASTER_CONFIG and session env set.
+Kinect capture worker. Launched by step_00_capture_session.py with RECORD_MASTER_CONFIG and session env set.
 """
 
 import csv

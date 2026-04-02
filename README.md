@@ -6,20 +6,20 @@
 Run the unified capture launcher:
 
 ```bash
-python scripts/capture.py
+python scripts/step_00_capture_session.py
 ```
 
 What it does:
 - Reads `scripts/config/config.json`.
-- Launches `scripts/record_kinect_final_with_capture.py` when `launch.run_kinect=true`.
-- Launches `scripts/record_orbbec_final_with_capture.py` when `launch.run_orbbec=true`.
+- Launches `scripts/step_00a_record_kinect_with_capture.py` when `launch.run_kinect=true`.
+- Launches `scripts/step_00b_record_orbbec_with_capture.py` when `launch.run_orbbec=true`.
 - Creates a session folder under `recordings/` by default.
 - Stops automatically after configured duration, or manually with `Ctrl+C`.
 
 ### 2) Related capture scripts
-- `scripts/record_kinect_final_with_capture.py`: records Kinect MKVs + per-frame timestamp CSV sidecars.
-- `scripts/record_orbbec_final_with_capture.py`: records Orbbec BAGs + per-frame timestamp CSV sidecars.
-- `scripts/config/config.json`: shared capture configuration used by `capture.py`.
+- `scripts/step_00a_record_kinect_with_capture.py`: records Kinect MKVs + per-frame timestamp CSV sidecars.
+- `scripts/step_00b_record_orbbec_with_capture.py`: records Orbbec BAGs + per-frame timestamp CSV sidecars.
+- `scripts/config/config.json`: shared capture configuration used by `step_00_capture_session.py`.
 - `scripts/config/multi_device_sync_config.json`: optional Orbbec serial-specific sync config reference.
 
 ### 3) Tuning parameters in `scripts/config/config.json`
@@ -108,25 +108,25 @@ Use your target person/session in place of `person_1/session_1`.
 1. Kinect export:
 
 ```bash
-python scripts/export_kinect_synced_by_device_ts_data.py data/person_1/session_1/data_collection
+python scripts/step_01_export_kinect_synced_data.py data/person_1/session_1/data_collection
 ```
 
 2. Orbbec export:
 
 ```bash
-python scripts/export_orbbec_synced_by_device_ts_data.py data/person_1/session_1/data_collection
+python scripts/step_02_export_orbbec_synced_data.py data/person_1/session_1/data_collection
 ```
 
 3. Pressure export:
 
 ```bash
-python scripts/export_pressure_synced_by_device_ts_data.py data/person_1/session_1/data_collection
+python scripts/step_05_export_pressure_synced_data.py data/person_1/session_1/data_collection
 ```
 
 4. Fused depth export:
 
 ```bash
-python scripts/export_fused_depth_maps.py \
+python scripts/step_04_export_fused_depth_maps.py \
   --calib_json outputs/person_1/session_1/depth_calibration/depth_calibration.json \
   --sync_csv outputs/person_1/session_1/orbbec/orbbec_synced_data_companion.csv \
   --cam1_depth_dir outputs/person_1/session_1/orbbec/orbbec_depth_master \
@@ -138,13 +138,13 @@ python scripts/export_fused_depth_maps.py \
 5. Kinect-Orbbec mapping (CSV only):
 
 ```bash
-python scripts/plot_kinect_orbbec_from_exported_data.py outputs/person_1/session_1
+python scripts/step_06_sync_kinect_orbbec_from_exports.py outputs/person_1/session_1
 ```
 
 6. Pressure-Kinect-Orbbec mapping (CSV only):
 
 ```bash
-python scripts/plot_kinect_orbbec_pressure_from_exported_data.py outputs/person_1/session_1
+python scripts/step_07_sync_pressure_kinect_orbbec_from_exports.py outputs/person_1/session_1
 ```
 
 If you also want plot images for steps 5 and 6, add `--plot`.
@@ -152,7 +152,7 @@ If you also want plot images for steps 5 and 6, add `--plot`.
 7. Trim both synced CSVs to their valid overlap windows:
 
 ```bash
-python scripts/trim_synced_overlap_csvs.py \
+python scripts/step_08_trim_overlap_csvs.py \
   --pressure-rgb-depth-csv outputs/person_1/session_1/synced_data_from_pressure_kinect_orbbec/synced_data_from_pressure_kinect_orbbec.csv \
   --rgb-depth-csv outputs/person_1/session_1/synced_data_from_kinect_orbbec/synced_data_from_kinect_orbbec.csv
 ```
@@ -160,12 +160,12 @@ python scripts/trim_synced_overlap_csvs.py \
 8. Plot from trimmed CSVs:
 
 ```bash
-python scripts/plot_kinect_orbbec_from_trimmed_csv.py \
+python scripts/step_09_plot_kinect_orbbec_from_trimmed_csv.py \
   --trimmed-csv outputs/person_1/session_1/person_1_session_1_rgb_depth.csv
 ```
 
 ```bash
-python scripts/plot_kinect_orbbec_pressure_from_trimmed_csv.py \
+python scripts/step_10_plot_pressure_kinect_orbbec_from_trimmed_csv.py \
   --trimmed-csv outputs/person_1/session_1/person_1_session_1_pressure_rgb_depth.csv
 ```
 

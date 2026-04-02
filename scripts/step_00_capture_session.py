@@ -104,14 +104,14 @@ def main() -> None:
     if run_kinect:
         processes.append(
             subprocess.Popen(
-                [sys.executable, str(script_dir / "record_kinect_final_with_capture.py")],
+                [sys.executable, str(script_dir / "step_00a_record_kinect_with_capture.py")],
                 env=env,
             )
         )
     if run_orbbec:
         processes.append(
             subprocess.Popen(
-                [sys.executable, str(script_dir / "record_orbbec_final_with_capture.py")],
+                [sys.executable, str(script_dir / "step_00b_record_orbbec_with_capture.py")],
                 env=env,
             )
         )
